@@ -1,0 +1,3439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Uperise Global Advisors - Professional accounting, taxation, auditing services, Website Design, Data Analytics and Financial Services">
+    <meta name="theme-color" content="#0d47a1">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/animations.css">
+    <link rel="stylesheet" href="/static/css/hero-animations.css">
+    <link rel="stylesheet" href="/static/css/country-switcher.css">
+    <link rel="stylesheet" href="/static/css/tax-audit-styles.css">
+    <link rel="stylesheet" href="/static/css/GST-styles.css">
+    <link rel="stylesheet" href="/static/css/blog.css">
+
+
+    
+    <title>Home - Uperise Global Advisors</title>
+    
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            --primary-light: #5e92f3;
+            --primary-dark: #003c8f;
+            --secondary-color: #1e88e5;
+            --accent-color: #ffc107;
+            --text-light: #f5f5f5;
+            --text-dark: #212121;
+            --background-light: #ffffff;
+            --background-dark: #f5f5f5;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --danger-color: #f44336;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s;
+            --navbar-blue: #0d47a1; /* Blue color for navbar */
+            
+            /* Responsive font sizes */
+            --h1-font-size: clamp(2rem, 5vw, 3.5rem);
+            --h2-font-size: clamp(1.8rem, 4vw, 2.8rem);
+            --h3-font-size: clamp(1.5rem, 3vw, 2.2rem);
+            --h4-font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            --h5-font-size: clamp(1rem, 2vw, 1.5rem);
+            --h6-font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+            --body-font-size: clamp(0.9rem, 1.5vw, 1rem);
+            --small-font-size: clamp(0.8rem, 1vw, 0.9rem);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            overflow-x: hidden;
+            font-size: var(--body-font-size);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        h1 { font-size: var(--h1-font-size); }
+        h2 { font-size: var(--h2-font-size); }
+        h3 { font-size: var(--h3-font-size); }
+        h4 { font-size: var(--h4-font-size); }
+        h5 { font-size: var(--h5-font-size); }
+        h6 { font-size: var(--h6-font-size); }
+        
+        /* Theme toggle */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+        
+        .theme-switch {
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 24px;
+        }
+        
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: var(--accent-color);
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px var(--accent-color);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        /* Dark theme styles */
+        body.dark-theme {
+            --primary-color: #5e92f3;
+            --primary-light: #8abfff;
+            --primary-dark: #0064c8;
+            --secondary-color: #42a5f5;
+            --text-light: #ffffff;
+            --text-dark: #e0e0e0;
+            --background-light: #121212;
+            --background-dark: #1e1e1e;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        body.dark-theme .navbar {
+            background-color: var(--background-dark) !important;
+            transition: background-color 0.5s ease;
+        }
+
+        body.dark-theme .card {
+            background-color: #1e1e1e;
+            border-color: #333;
+            transition: background-color 0.5s ease, border-color 0.5s ease;
+        }
+
+        body.dark-theme .bg-light {
+            background-color: #1e1e1e !important;
+            transition: background-color 0.5s ease;
+        }
+
+        body.dark-theme .text-dark {
+            color: var(--text-light) !important;
+            transition: color 0.5s ease;
+        }
+
+        body.dark-theme .footer {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Light mode transition */
+        body {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        /* Add these styles to your CSS file or in a <style> tag in the head section */
+
+/* Ensure dropdown menu has proper z-index to appear above other elements */
+.dropdown-menu {
+    z-index: 1030;
+}
+
+/* Make sure dropdown items are visible */
+.dropdown-item {
+    color: #212529;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    width: 100%;
+}
+
+/* Style for dropdown items on hover */
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+/* Style for dropdown menu */
+.dropdown-menu-animated {
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+/* Fix for dropdown animation */
+.dropdown-menu.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: var(--navbar-blue) !important; /* Blue background */
+    transition: all 0.3s ease;
+    padding: 0.75rem 1rem;
+}
+
+.navbar.scrolled {
+    background-color: var(--navbar-blue) !important; /* Keep blue even when scrolled */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.logo-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.logo-spin {
+    animation: spin 0.8s ease-in-out;
+}
+
+.navbar-brand img.logo {
+    max-height: 60px;
+    width: auto;
+    display: block;
+    min-width: 60px;
+    background-color: transparent;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--navbar-blue);
+        padding: 1rem;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+    
+    .navbar-nav {
+        margin-top: 0.5rem;
+    }
+    
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+    }
+}
+
+/* Image sizing for better compatibility */
+.feature-image img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.service-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.tool-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.client-logo img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.flag {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* Explore Services Section */
+.explore-services {
+    position: relative;
+    z-index: 1;
+    padding: clamp(2rem, 5vw, 4rem) 0;
+    background-image: url('assests/explore-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease;
+    animation: backgroundAnimation 30s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.explore-services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark mode specific styles for explore services */
+body.dark-theme .explore-services {
+    background-image: none;
+    background-color: #121212;
+    animation: none;
+}
+
+body.dark-theme .explore-services::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.explore-card {
+    transition: all 0.3s ease;
+    border-top: 5px solid transparent;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    height: 100%;
+}
+
+.explore-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.explore-card:nth-child(1) {
+    border-top-color: var(--primary-color);
+}
+
+.explore-card:nth-child(2) {
+    border-top-color: var(--success-color);
+}
+
+.explore-card:nth-child(3) {
+    border-top-color: var(--danger-color);
+}
+
+.explore-icon {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* General responsive container styles */
+.container {
+    width: 100%;
+    padding-right: clamp(0.75rem, 3vw, 1.5rem);
+    padding-left: clamp(0.75rem, 3vw, 1.5rem);
+}
+
+/* Section spacing */
+section {
+    padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+/* Card responsiveness */
+.card {
+    height: 100%;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+/* Responsive spacing utilities */
+.mb-responsive {
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.mt-responsive {
+    margin-top: clamp(1rem, 3vw, 2rem);
+}
+
+.py-responsive {
+    padding-top: clamp(2rem, 5vw, 4rem);
+    padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.px-responsive {
+    padding-left: clamp(1rem, 3vw, 2rem);
+    padding-right: clamp(1rem, 3vw, 2rem);
+}
+
+/* Responsive text alignment */
+@media (max-width: 768px) {
+    .text-md-center {
+        text-align: center !important;
+    }
+    
+    .d-md-flex {
+        display: flex !important;
+    }
+    
+    .flex-md-column {
+        flex-direction: column !important;
+    }
+    
+    .align-items-md-center {
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-sm-center {
+        text-align: center !important;
+    }
+    
+    .d-sm-flex {
+        display: flex !important;
+    }
+    
+    .flex-sm-column {
+        flex-direction: column !important;
+    }
+    
+    .align-items-sm-center {
+        align-items: center !important;
+    }
+}
+    /* Additional responsive styles */
+    @media (max-width: 576px) {
+        body {
+            font-size: 14px;
+        }
+        
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        
+        .col, [class*="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    
+    /* Print styles for better printing */
+    @media print {
+        .navbar, .footer, .back-to-top, .cookie-consent-banner {
+            display: none !important;
+        }
+        
+        body {
+            font-size: 12pt;
+            color: #000;
+            background-color: #fff;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body class="animate__animated animate__fadeIn">
+<!-- Add this right before the closing </body> tag in your base.html file -->
+
+<!-- Cookie Consent Banner -->
+<!-- Cookie Consent Banner -->
+<div id="cookieConsentBanner" class="cookie-consent-banner" style="display: none;">
+    <div class="cookie-consent-content">
+        <div class="cookie-header">
+            <h5>🍪 Cookie Notice</h5>
+            <button type="button" class="btn-close" id="cookieCloseBtn" aria-label="Close"></button>
+        </div>
+        <p>
+            We use cookies to enhance your experience on our website, remember your preferences, 
+            and understand how visitors use our site. By clicking "Accept All", you consent to the use of ALL cookies. 
+            You can also visit "Cookie Settings" to provide controlled consent.
+        </p>
+        <div class="cookie-buttons">
+            <button class="btn btn-outline-secondary cookie-btn" id="cookieSettingsBtn">Cookie Settings</button>
+            <button class="btn btn-primary cookie-btn" id="acceptAllCookiesBtn">Accept All</button>
+        </div>
+    </div>
+    
+    <!-- Cookie Settings Panel (initially hidden) -->
+    <div class="cookie-settings" id="cookieSettings" style="display: none;">
+        <div class="cookie-settings-header">
+            <h5>Cookie Settings</h5>
+            <button type="button" class="btn-close" id="settingsCloseBtn" aria-label="Close"></button>
+        </div>
+        <p>You can choose which cookies you want to accept. Essential cookies cannot be disabled as they are necessary for the website to function.</p>
+        
+        <div class="cookie-options">
+            <div class="cookie-option">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="essentialCookies" checked disabled>
+                    <label class="form-check-label" for="essentialCookies">
+                        <strong>Essential Cookies</strong>
+                    </label>
+                </div>
+                <p class="cookie-description">These cookies are necessary for the website to function and cannot be switched off.</p>
+            </div>
+            
+            <div class="cookie-option">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="analyticsCookies">
+                    <label class="form-check-label" for="analyticsCookies">
+                        <strong>Analytics Cookies</strong>
+                    </label>
+                </div>
+                <p class="cookie-description">These cookies help us understand how visitors interact with our website.</p>
+            </div>
+            
+            <div class="cookie-option">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="preferenceCookies">
+                    <label class="form-check-label" for="preferenceCookies">
+                        <strong>Preference Cookies</strong>
+                    </label>
+                </div>
+                <p class="cookie-description">These cookies enable personalized features and remembering your choices.</p>
+            </div>
+        </div>
+        
+        <div class="cookie-actions">
+            <button class="btn btn-success" id="savePreferencesBtn">Save Preferences</button>
+        </div>
+    </div>
+</div>
+
+<!-- Visitor Tracking Scripts -->
+<script src="/static/js/visitor-tracking.js"></script>
+
+<!-- Cookie Consent Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Cookie Consent Management
+    document.addEventListener('DOMContentLoaded', function() {
+    // Cookie Consent Management
+    const cookieConsentBanner = document.getElementById('cookieConsentBanner');
+    const cookieSettings = document.getElementById('cookieSettings');
+    const cookieCloseBtn = document.getElementById('cookieCloseBtn');
+    const cookieSettingsBtn = document.getElementById('cookieSettingsBtn');
+    const acceptAllCookiesBtn = document.getElementById('acceptAllCookiesBtn');
+    const settingsCloseBtn = document.getElementById('settingsCloseBtn');
+    const savePreferencesBtn = document.getElementById('savePreferencesBtn');
+    
+    // Cookie consent checkboxes
+    const analyticsCookies = document.getElementById('analyticsCookies');
+    const preferenceCookies = document.getElementById('preferenceCookies');
+    
+    // Debug: Log cookie status on page load
+    console.log('Analytics cookies status on load:', localStorage.getItem('analytics_cookies'));
+    console.log('Cookie consent status on load:', getCookie('cookie_consent'));
+    
+    // Check if we already have consent (improved check)
+    const hasConsent = getCookie('cookie_consent') === 'true';
+    
+    // If we don't have consent yet, show the banner
+    if (!hasConsent) {
+        console.log('No cookie consent found, showing banner');
+        setTimeout(() => {
+            cookieConsentBanner.classList.add('show');
+        }, 1000);
+    } else {
+        console.log('Cookie consent already given');
+        // If consent was already given, initialize analytics
+        if (localStorage.getItem('analytics_cookies') === 'true') {
+            enableAnalytics();
+        }
+    }
+    
+    // Handle close button
+    cookieCloseBtn.addEventListener('click', function() {
+        cookieConsentBanner.classList.remove('show');
+    });
+    
+    // Handle settings button
+    cookieSettingsBtn.addEventListener('click', function() {
+        cookieSettings.style.display = 'block';
+    });
+    
+    // Handle settings close button
+    settingsCloseBtn.addEventListener('click', function() {
+        cookieSettings.style.display = 'none';
+    });
+    
+    // Handle accept all button
+    acceptAllCookiesBtn.addEventListener('click', function() {
+        setCookieConsent(true);
+        cookieConsentBanner.classList.remove('show');
+        
+        // Check all cookie options
+        analyticsCookies.checked = true;
+        preferenceCookies.checked = true;
+        
+        // Save the preferences
+        savePreferences(true, true, true);
+    });
+    
+    // Handle save preferences button
+    savePreferencesBtn.addEventListener('click', function() {
+        const analytics = analyticsCookies.checked;
+        const preferences = preferenceCookies.checked;
+        
+        // Save the preferences
+        savePreferences(true, analytics, preferences);
+        
+        // Close the banner
+        cookieConsentBanner.classList.remove('show');
+    });
+    
+    // Function to get cookie value (improved with logging)
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) {
+            const cookieValue = parts.pop().split(';').shift();
+            console.log(`Retrieved cookie ${name}:`, cookieValue);
+            return cookieValue;
+        }
+        console.log(`Cookie ${name} not found`);
+        return null;
+    }
+    
+    // Function to save cookie consent (improved)
+    function setCookieConsent(consent) {
+        // Send consent to server
+        fetch('/set-cookie-consent', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                consent: consent
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Cookie consent saved on server:', data);
+        })
+        .catch(error => {
+            console.error('Error saving cookie consent:', error);
+            
+            // If server request fails, ensure client-side cookie is set
+            setClientCookie(consent);
+        });
+        
+        // Also set client-side cookie with proper formatting
+        setClientCookie(consent);
+    }
+    
+    // Helper function to set the client-side cookie
+    function setClientCookie(consent) {
+        const date = new Date();
+        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000)); // 1 year
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `cookie_consent=${consent};${expires};path=/;SameSite=Lax`;
+        console.log('Cookie consent set in browser:', consent);
+    }
+    
+    // Function to save cookie preferences
+    function savePreferences(essential, analytics, preferences) {
+        // Always accept essential cookies
+        setCookieConsent(true);
+        
+        // Set individual preferences with explicit string conversion
+        localStorage.setItem('analytics_cookies', analytics.toString());
+        localStorage.setItem('preference_cookies', preferences.toString());
+        console.log('Saved preferences:', {
+            essential: essential,
+            analytics: analytics,
+            preferences: preferences
+        });
+        
+        // This is where you would initialize or disable analytics based on preferences
+        if (analytics) {
+            enableAnalytics();
+        } else {
+            disableAnalytics();
+        }
+    }
+    
+    // Function to enable analytics (placeholder)
+    function enableAnalytics() {
+        // Initialize analytics (Google Analytics, etc)
+        console.log('Analytics enabled');
+        
+        // Example for Google Analytics (if you have it)
+        if (typeof gtag === 'function') {
+            // Enable Google Analytics
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+        
+        // Initialize visitor tracking
+        if (typeof initVisitorTracking === 'function') {
+            initVisitorTracking();
+        }
+    }
+    
+    // Function to disable analytics (placeholder)
+    function disableAnalytics() {
+        // Disable analytics tracking
+        console.log('Analytics disabled');
+        
+        // Example for Google Analytics (if you have it)
+        if (typeof gtag === 'function') {
+            // Disable Google Analytics
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+        }
+        
+        // Disable visitor tracking
+        if (typeof disableVisitorTracking === 'function') {
+            disableVisitorTracking();
+        }
+    }
+    
+    // Pre-check boxes based on existing preferences
+    if (localStorage.getItem('analytics_cookies') === 'true') {
+        analyticsCookies.checked = true;
+        enableAnalytics();
+    }
+    
+    if (localStorage.getItem('preference_cookies') === 'true') {
+        preferenceCookies.checked = true;
+    }
+});
+</script>
+
+<!-- Cookie Consent Styles -->
+<style>
+    .cookie-consent-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        color: #333;
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+        transform: translateY(100%);
+        transition: transform 0.5s ease-in-out;
+        visibility: hidden;
+        width: 100%;
+    }
+    
+    .cookie-consent-banner.show {
+        transform: translateY(0);
+        visibility: visible;
+    }
+    
+    .cookie-consent-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: clamp(1rem, 3vw, 1.5rem);
+    }
+    
+    .cookie-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .cookie-header h5 {
+        margin: 0;
+        font-weight: 600;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+    }
+    
+    .cookie-buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: clamp(0.5rem, 2vw, 1rem);
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .cookie-btn {
+        min-width: clamp(100px, 30vw, 120px);
+        margin-bottom: 0.5rem;
+    }
+    
+    @media (max-width: 576px) {
+        .cookie-buttons {
+            justify-content: center;
+        }
+        
+        .cookie-btn {
+            width: 100%;
+        }
+    }
+    
+    .cookie-settings {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: clamp(1rem, 3vw, 1.5rem);
+        background-color: #f8f9fa;
+        border-top: 1px solid #e9ecef;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .cookie-settings-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        position: sticky;
+        top: 0;
+        background-color: #f8f9fa;
+        padding: 0.5rem 0;
+        z-index: 1;
+    }
+    
+    .cookie-settings-header h5 {
+        margin: 0;
+        font-weight: 600;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+    }
+    
+    .cookie-options {
+        margin: 1.5rem 0;
+    }
+    
+    .cookie-option {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .cookie-option:last-child {
+        border-bottom: none;
+    }
+    
+    .cookie-description {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        color: #6c757d;
+        padding-left: clamp(1.5rem, 3vw, 2.5rem);
+        font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    }
+    
+    .cookie-actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    @media (max-width: 576px) {
+        .cookie-actions {
+            justify-content: center;
+        }
+        
+        .cookie-actions button {
+            width: 100%;
+        }
+        
+        .cookie-option {
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+    }
+    
+    /* Dark theme compatibility */
+    body.dark-theme .cookie-consent-banner {
+        background-color: #343a40;
+        color: #f8f9fa;
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    body.dark-theme .cookie-settings {
+        background-color: #2a2a2a;
+        border-top-color: #212529;
+    }
+    
+    body.dark-theme .cookie-option {
+        border-bottom-color: #212529;
+    }
+    
+    body.dark-theme .cookie-description {
+        color: #adb5bd;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .cookie-consent-content {
+            padding: 1rem;
+        }
+        
+        .cookie-buttons {
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        
+        .cookie-btn {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cookie-settings {
+            padding: 1rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .cookie-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .cookie-header .btn-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        
+        .cookie-header h5 {
+            margin-bottom: 0.5rem;
+            padding-right: 2rem;
+        }
+    }
+</style>
+    <!-- Page Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2">Loading Uperise Global Advisors...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="javascript:void(0);" onclick="refreshPage(this)">
+                <div class="logo-container me-2">
+                    <img src="./assests/logo2.png" alt="UG" class="logo" width="60" height="60" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-fallback" style="display:none; width:60px; height:60px; background-color:#0d47a1; color:white; font-weight:bold; align-items:center; justify-content:center; border-radius:4px; font-size: 18px;">UG</div>
+                </div>
+                <span class="logo-text">Uperise Global Advisors</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="/about">About</a>
+                    </li>
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-animated" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="/services/accounting">Accounting</a></li>
+                            <li><a class="dropdown-item" href="/services/taxation">Taxation</a></li>
+                            <li><a class="dropdown-item" href="/services/internal-audit">Internal Audit</a></li>
+                            <li><a class="dropdown-item" href="/services/statutory-audit">Statutory Audit</a></li>
+                            <li><a class="dropdown-item" href="/services/financial-statements">Financial Statements</a></li>
+                            <li><a class="dropdown-item" href="/services/technology-audit">Technology Audit</a></li>
+                            <li><a class="dropdown-item" href="/services/technology-development">Technology Development</a></li>
+                            <li><a class="dropdown-item" href="/services/data-analysis">Data Analysis</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="theme-toggle">
+                                <input type="checkbox" id="theme-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <!-- Add this to your navbar or menu section -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Resources Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarResources">
+                                <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                                <li><a class="dropdown-item" href="/case-studies/index">Case Studies</a></li>
+                                <li><a class="dropdown-item" href="/resources/library">Resources Library</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li class="nav-item dropdown country-selector">
+                        <a class="nav-link dropdown-toggle" href="#" id="countryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="country-flag">
+                                <img src="assests/flags/usa.svg" alt="USA" class="flag flag-usa" id="current-flag">
+                            </span>
+                            <span class="country-name" id="current-country">USA</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end country-dropdown" aria-labelledby="countryDropdown">
+                            <li>
+                                <a class="dropdown-item country-option" href="#" data-country="usa">
+                                    <img src="assests/flags/usa.svg" alt="USA" class="flag">
+                                    <span>USA Services</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item country-option" href="#" data-country="india">
+                                    <img src="assests/flags/india.svg" alt="India" class="flag">
+                                    <span>India Services</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    <div class="flash-messages-container">
+        
+          
+        
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+
+    <!-- Hero Section with Typewriter Effect and Country-Specific Content -->
+    <header class="hero-full-bg">
+        <!-- Particles overlay for network effect -->
+        <div id="particles-js" class="particles-container"></div>
+        
+        <!-- Background image with overlay -->
+        <div class="hero-bg-image"></div>
+        
+        <!-- Content container -->
+        <div class="hero-content">
+            <div class="container text-center">
+                <!-- Logo Icon -->
+                <div class="hero-logo" data-aos="zoom-in" data-aos-duration="1200">
+                    <img src="assests/logo2.png" alt="Uperise Global Advisors" class="mb-4">
+                </div>
+                
+                <!-- USA Heading -->
+                <div class="usa-only">
+                    <h1 class="display-3 fw-bold text-white typewriter" 
+                        data-words="Welcome to Uperise Global Advisors USA,Strategic Financial Solutions,Expert Accounting Services,Your US Business Partner"
+                        data-type-speed="100"
+                        data-delete-speed="50"
+                        data-delay="2000">
+                        Welcome to Uperise Global Advisors USA
+                    </h1>
+                    
+                    <p class="lead fs-4 mt-4 text-white">
+                        Your Trusted Partner for US Accounting, Taxation, and Auditing Services
+                    </p>
+                </div>
+                
+                <!-- India Heading -->
+                <div class="india-only" style="display: none;">
+                    <h1 class="display-3 fw-bold text-white typewriter" 
+                        data-words="Welcome to Uperise Global Advisors India,GST and Tax Experts,Statutory Audit Specialists,Your Indian Business Partner"
+                        data-type-speed="100"
+                        data-delete-speed="50"
+                        data-delay="2000">
+                        Welcome to Uperise Global Advisors India
+                    </h1>
+                    
+                    <p class="lead fs-4 mt-4 text-white">
+                        Your Trusted Partner for Indian Statutory Audit, GST, and Taxation Services
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="mt-5 mb-5" data-aos="fade-up" data-aos-delay="800">
+                    <a href="/services" class="btn btn-light btn-lg px-5 py-3 rounded-pill">
+                        Explore Services <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator">
+                    <div class="scroll-text text-white">SCROLL DOWN</div>
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrows">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave Separator -->
+        <div class="wave-separator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,208C384,203,480,181,576,181.3C672,181,768,203,864,218.7C960,235,1056,245,1152,229.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+<!-- Country Selection Popup -->
+<div class="country-selection-popup" id="countrySelectionPopup">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h4>Welcome to Uperise Global Advisors</h4>
+            <button type="button" class="btn-close" aria-label="Close" id="closePopup"></button>
+        </div>
+        <div class="popup-body">
+            <p>Please select your region to see relevant content:</p>
+            
+            <div class="country-options">
+                <div class="country-option" data-country="usa">
+                    <div class="country-flag">
+                        <img src="assests/usa-logo.svg" alt="USA Flag" style="width: 150px; height: auto;">
+                    </div>
+                    <div class="country-info">
+                        <h5>United States</h5>
+                        <p>US GAAP, Taxation & Audit Services</p>
+                    </div>
+                </div>
+                
+                <div class="country-option" data-country="india">
+                    <div class="country-flag">
+                        <img src="assests/india-logo.svg" alt="India Flag" style="width: 150px; height: auto;">
+                    </div>
+                    <div class="country-info">
+                        <h5>India</h5>
+                        <p>GST, Statutory Audit & Tax Services</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="popup-footer">
+                <small>You can change your region anytime using the selector in the top menu</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Country Selection Popup Styling */
+.country-selection-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.country-selection-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: white;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.country-selection-popup.show .popup-content {
+    transform: translateY(0);
+}
+
+.popup-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-header h4 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.popup-body {
+    padding: 1.5rem;
+}
+
+.country-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.country-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.country-option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.country-flag {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+
+.country-flag img {
+    width: 40px;
+    height: auto;
+}
+
+.country-info {
+    flex: 1;
+}
+
+.country-info h5 {
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+}
+
+.country-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.popup-footer {
+    text-align: center;
+    margin-top: 1rem;
+    color: #6c757d;
+}
+
+/* Dark theme support */
+body.dark-theme .popup-content {
+    background-color: #2a2a2a;
+    color: #f8f9fa;
+}
+
+body.dark-theme .popup-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .popup-header h4 {
+    color: var(--primary-light);
+}
+
+body.dark-theme .country-option {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: #333;
+}
+
+body.dark-theme .country-option:hover {
+    border-color: var(--primary-light);
+}
+
+body.dark-theme .country-info p {
+    color: #adb5bd;
+}
+
+body.dark-theme .popup-footer {
+    color: #adb5bd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .popup-content {
+        width: 95%;
+    }
+    
+    .country-option {
+        padding: 0.75rem;
+    }
+    
+    .country-flag {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .country-flag img {
+        width: 30px;
+    }
+}
+</style>
+
+<script>
+// Country Selection Popup Script
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if it's the first visit
+    if (!localStorage.getItem('countrySelected')) {
+        // Show popup with a slight delay for better UX
+        setTimeout(function() {
+            const popup = document.getElementById('countrySelectionPopup');
+            popup.classList.add('show');
+        }, 1000);
+    }
+    
+    // Close button functionality
+    document.getElementById('closePopup').addEventListener('click', function() {
+        const popup = document.getElementById('countrySelectionPopup');
+        popup.classList.remove('show');
+        
+        // Set a flag in localStorage so popup doesn't show again
+        localStorage.setItem('countrySelected', 'true');
+    });
+    
+    // Country option selection
+    document.querySelectorAll('.country-option').forEach(option => {
+        option.addEventListener('click', function() {
+            const country = this.getAttribute('data-country');
+            
+            // Save the country preference
+            localStorage.setItem('selectedCountry', country);
+            localStorage.setItem('countrySelected', 'true');
+            
+            // Trigger country change event (for your existing country switcher)
+            const event = new CustomEvent('countrySelected', {
+                detail: { country: country }
+            });
+            document.dispatchEvent(event);
+            
+            // Handle country selection functionality
+            switchCountry(country);
+            
+            // Close the popup
+            document.getElementById('countrySelectionPopup').classList.remove('show');
+        });
+    });
+    
+    // Function to switch country (integrate with your existing functionality)
+    function switchCountry(country) {
+        // Update country selector in navbar
+        const currentFlag = document.getElementById('current-flag');
+        const currentCountry = document.getElementById('current-country');
+        
+        if (country === 'usa') {
+            // Show USA content
+            document.querySelectorAll('.usa-only').forEach(el => el.style.display = 'block');
+            document.querySelectorAll('.india-only').forEach(el => el.style.display = 'none');
+            
+            // Update navbar country selector
+            if (currentFlag) currentFlag.src = "assests/flags/usa.svg";
+            if (currentCountry) currentCountry.textContent = "USA";
+            
+        } else if (country === 'india') {
+            // Show India content
+            document.querySelectorAll('.usa-only').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.india-only').forEach(el => el.style.display = 'block');
+            
+            // Update navbar country selector
+            if (currentFlag) currentFlag.src = "assests/flags/india.svg";
+            if (currentCountry) currentCountry.textContent = "India";
+        }
+        
+        // Dispatch the countryChanged event for other components
+        const event = new CustomEvent('countryChanged', {
+            detail: { country: country }
+        });
+        document.dispatchEvent(event);
+    }
+});
+</script>
+<section class="features py-5 bg-light">
+    <div class="container">
+        <!-- Features Background Elements -->
+        <div class="features-bg-elements">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        
+        <!-- USA Features -->
+        <div class="usa-only">
+            <div class="section-header text-center mb-5">
+                <span class="badge bg-primary text-white mb-2">US EXPERTISE</span>
+                <h2 class="display-5 fw-bold typewriter" data-aos="fade-up"
+                    data-words="Why Choose Uperise Global Advisors?,Expert Financial Solutions,US GAAP Specialists,Your US Tax Partner"
+                    data-type-speed="100"
+                    data-delete-speed="50"
+                    data-delay="2000">
+                    Why Choose Uperise Global Advisors for US Services?
+                </h2>
+                <div class="divider mx-auto my-3"></div>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">Trusted by businesses across the United States for our expertise and personalized service</p>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                    <div class="feature-card h-100 p-4 rounded shadow-sm hover-lift">
+                        <div class="feature-image mb-4">
+                            <img src="assests/features/gaap-expertise.svg" alt="US GAAP Expertise" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-journal-check display-4 text-primary floating"></i>
+                        </div>
+                        <h3 class="h4 mb-3">US GAAP Expertise</h3>
+                        <p class="mb-3">Comprehensive accounting solutions aligned with US GAAP standards, ensuring regulatory compliance and accurate financial reporting.</p>
+                        <ul class="feature-list text-start">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Financial Statement Preparation</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Regulatory Compliance</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Audit-Ready Documentation</li>
+                        </ul>
+                        <a href="/services/accounting" class="btn btn-link text-primary stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                    <div class="feature-card h-100 p-4 rounded shadow-sm hover-lift">
+                        <div class="feature-image mb-4">
+                            <img src="assests/features/tax-compliance.svg" alt="US Tax Compliance" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-lightbulb-fill display-4 text-success floating"></i>
+                        </div>
+                        <h3 class="h4 mb-3 animate__animated animate__pulse animate__infinite animate__slower">US Tax Compliance</h3>
+                        <p class="mb-3">Strategic planning and proactive approach to optimize your US tax liabilities while ensuring full compliance with IRS regulations.</p>
+                        <ul class="feature-list text-start">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Corporate Tax Planning</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Federal & State Filing</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Tax Credit Optimization</li>
+                        </ul>
+                        <a href="/services/taxation" class="btn btn-link text-primary stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="feature-card h-100 p-4 rounded shadow-sm hover-lift">
+                        <div class="feature-image mb-4">
+                            <img src="assests/features/financial-reporting.svg" alt="Financial Reporting" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-bar-chart-line display-4 text-danger floating"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Financial Reporting</h3>
+                        <p class="mb-3">Data-driven insights and customized reporting solutions to support informed US business decisions and growth strategies.</p>
+                        <ul class="feature-list text-start">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Custom KPI Dashboards</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Trend Analysis</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Performance Benchmarking</li>
+                        </ul>
+                        <a href="/services/financial-statements" class="btn btn-link text-primary stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                <a href="/services" class="btn btn-primary btn-lg rounded-pill px-4 pulse-button">
+                    View All US Services <i class="bi bi-arrow-right-circle ms-2"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- India Features -->
+        <div class="india-only" style="display: none;">
+            <div class="section-header text-center mb-5">
+                <span class="badge bg-primary text-white mb-2">INDIA EXPERTISE</span>
+                <h2 class="display-5 fw-bold typewriter" data-aos="fade-up"
+                    data-words="Why Choose Uperise Global Advisors?,Indian Tax Specialists,GST Compliance Experts,Your Indian Business Partner"
+                    data-type-speed="100"
+                    data-delete-speed="50"
+                    data-delay="2000">
+                    Why Choose Uperise Global Advisors for Indian Services?
+                </h2>
+                <div class="divider mx-auto my-3"></div>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">Trusted by businesses across India for our deep understanding of local regulations and compliance requirements</p>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                    <div class="feature-card h-100 p-4 rounded shadow-sm hover-lift">
+                        <div class="feature-image mb-4">
+                            <img src="assests/features/statutory-audit.svg" alt="Statutory Audit Specialists" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-book display-4 text-primary floating"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Statutory Audit Specialists</h3>
+                        <p class="mb-3">Expert statutory audit services compliant with Indian regulations, ensuring adherence to Companies Act requirements.</p>
+                        <ul class="feature-list text-start">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Companies Act Compliance</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Risk Assessment</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Comprehensive Documentation</li>
+                        </ul>
+                        <a href="/services/statutory-audit-india" class="btn btn-link text-primary stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                    <div class="feature-card h-100 p-4 rounded shadow-sm hover-lift">
+                        <div class="feature-image mb-4">
+                            <img src="assests/features/gst.svg" alt="GST Filing & Compliance" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-percent display-4 text-success floating"></i>
+                        </div>
+                        <h3 class="h4 mb-3 animate__animated animate__pulse animate__infinite animate__slower">GST Filing & Compliance</h3>
+                        <p class="mb-3">Comprehensive GST solutions for Indian businesses, from registration to regular filings and reconciliations.</p>
+                        <ul class="feature-list text-start">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>GST Registration</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Monthly/Quarterly Filing</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Input Tax Credit Optimization</li>
+                        </ul>
+                        <a href="/services/gst-india" class="btn btn-link text-primary stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="feature-card h-100 p-4 rounded shadow-sm hover-lift">
+                        <div class="feature-image mb-4">
+                            <img src="assests/features/company.svg" alt="Company Registration" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-building display-4 text-danger floating"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Company Registration</h3>
+                        <p class="mb-3">Streamlined company formation and registration services, navigating complex regulatory requirements in India.</p>
+                        <ul class="feature-list text-start">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Incorporation Documentation</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Regulatory Filings</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Post-Registration Compliance</li>
+                        </ul>
+                        <a href="/services/company-formation-india" class="btn btn-link text-primary stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                <a href="/services" class="btn btn-primary btn-lg rounded-pill px-4 pulse-button">
+                    View All Indian Services <i class="bi bi-arrow-right-circle ms-2"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Trust Indicators (appears for both countries) -->
+        <div class="trust-indicators row mt-5 pt-5 border-top">
+            <div class="col-12 text-center mb-4">
+                <h4 class="reveal-text">Trusted by Businesses of All Sizes</h4>
+            </div>
+            <div class="col-lg-3 col-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="trust-indicator-card p-3 rounded">
+                    <i class="bi bi-shield-check text-success mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0 fw-bold">Certified Experts</p>
+                    <div class="counter-wrapper">
+                        <span class="counter-value" data-target="12">0</span>
+                        <span class="counter-suffix">+ Years</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="trust-indicator-card p-3 rounded">
+                    <i class="bi bi-clock-history text-primary mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0 fw-bold">24-Hour Response</p>
+                    <div class="counter-wrapper">
+                        <span class="counter-value" data-target="100">0</span>
+                        <span class="counter-suffix">% Committed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="trust-indicator-card p-3 rounded">
+                    <i class="bi bi-lock text-danger mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0 fw-bold">Data Security</p>
+                    <div class="counter-wrapper">
+                        <span class="counter-value" data-target="256">0</span>
+                        <span class="counter-suffix">-bit Encryption</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 text-center mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="trust-indicator-card p-3 rounded">
+                    <i class="bi bi-currency-exchange text-info mb-2" style="font-size: 2.5rem;"></i>
+                    <p class="mb-0 fw-bold">Transparent Pricing</p>
+                    <div class="counter-wrapper">
+                        <span class="counter-value" data-target="98">0</span>
+                        <span class="counter-suffix">% Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Client Carousel -->
+        <div class="client-logos mt-5 pt-3">
+            <h5 class="text-center mb-4 text-muted">Our Trusted Partners</h5>
+            <div class="client-logo-slider" data-aos="fade-up">
+                <div class="logo-carousel d-flex align-items-center justify-content-between flex-wrap">
+                    <div class="client-logo mx-4 my-3" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="assests/clients/client1.svg" alt="Client Logo" class="img-fluid" style="max-height: 50px;">
+                    </div>
+                    <div class="client-logo mx-4 my-3" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="assests/clients/client2.svg" alt="Client Logo" class="img-fluid" style="max-height: 50px;">
+                    </div>
+                    <div class="client-logo mx-4 my-3" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="assests/clients/client3.svg" alt="Client Logo" class="img-fluid" style="max-height: 50px;">
+                    </div>
+                    <div class="client-logo mx-4 my-3" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="assests/clients/client4.svg" alt="Client Logo" class="img-fluid" style="max-height: 50px;">
+                    </div>
+                    <div class="client-logo mx-4 my-3" data-aos="zoom-in" data-aos-delay="500">
+                        <img src="assests/clients/client5.svg" alt="Client Logo" class="img-fluid" style="max-height: 50px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section class="services py-5">
+    <!-- Background shapes -->
+    <div class="services-bg-elements">
+        <div class="bg-shape shape-circle"></div>
+        <div class="bg-shape shape-dots"></div>
+        <div class="bg-shape shape-line"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <div class="badge-wrapper mb-3" data-aos="fade-down">
+                <span class="badge bg-primary px-3 py-2 rounded-pill">EXPERT SOLUTION</span>
+            </div>
+            
+            <!-- USA Services Header -->
+            <div class="usa-only">
+                <h2 class="display-4 fw-bold text-gradient mb-3" data-aos="fade-up">Our US Core Services</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
+                    Comprehensive financial solutions designed for US businesses and regulations.
+                </p>
+            </div>
+            
+            <!-- India Services Header -->
+            <div class="india-only" style="display: none;">
+                <h2 class="display-4 fw-bold text-gradient mb-3" data-aos="fade-up">Our Indian Core Services</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
+                    Specialized financial services tailored to Indian regulatory requirements.
+                </p>
+            </div>
+            
+            <div class="section-divider mx-auto my-4" data-aos="zoom-in" data-aos-delay="200"></div>
+        </div>
+        
+        <!-- USA Services -->
+        <div class="usa-only">
+            <div class="row g-4">
+                <!-- Accounting Service -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-up" data-aos-duration="800">
+                    <div class="service-card h-100 rounded-lg shadow-hover">
+                        <div class="service-img-container">
+                            <img src="assests/services/accounting-usa.svg" alt="US Accounting Services" class="service-img">
+                            <div class="service-overlay">
+                                <i class="bi bi-file-earmark-spreadsheet service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-icon-wrapper mb-3">
+                                <i class="bi bi-file-earmark-spreadsheet display-4 text-primary"></i>
+                            </div>
+                            <h3 class="h4 service-title">US Accounting</h3>
+                            <div class="service-divider"></div>
+                            <p class="service-description">Comprehensive bookkeeping, financial reporting, and software integration services tailored to US businesses.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>GAAP-Compliant Financial Statements</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Multi-State Accounting</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Cloud Accounting Solutions</li>
+                            </ul>
+                            <a href="/services/accounting" class="btn btn-primary btn-lg w-100 mt-3 service-btn">
+                                Learn More <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Taxation Service -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-up" data-aos-delay="100" data-aos-duration="800">
+                    <div class="service-card h-100 rounded-lg shadow-hover">
+                        <div class="service-img-container">
+                            <img src="assests/services/taxation-usa.svg" alt="US Taxation Services" class="service-img">
+                            <div class="service-overlay">
+                                <i class="bi bi-cash-coin service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-icon-wrapper mb-3">
+                                <i class="bi bi-cash-coin display-4 text-success"></i>
+                            </div>
+                            <h3 class="h4 service-title">US Taxation</h3>
+                            <div class="service-divider"></div>
+                            <p class="service-description">Expert US tax planning, compliance, and advisory services to optimize your tax liabilities.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Federal & State Tax Planning</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>International Tax Strategy</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Corporate Tax Solutions</li>
+                            </ul>
+                            <a href="/services/taxation" class="btn btn-success btn-lg w-100 mt-3 service-btn">
+                                Learn More <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Auditing Service -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-up" data-aos-delay="200" data-aos-duration="800">
+                    <div class="service-card h-100 rounded-lg shadow-hover">
+                        <div class="service-img-container">
+                            <img src="assests/services/audit-usa.svg" alt="US Auditing Services" class="service-img">
+                            <div class="service-overlay">
+                                <i class="bi bi-bar-chart-line service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-icon-wrapper mb-3">
+                                <i class="bi bi-bar-chart-line display-4 text-danger"></i>
+                            </div>
+                            <h3 class="h4 service-title">US Auditing</h3>
+                            <div class="service-divider"></div>
+                            <p class="service-description">Internal and external audits, forensic investigations, and assurance services for US businesses.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Compliance Audits</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Risk Assessment</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Fraud Investigation</li>
+                            </ul>
+                            <a href="/services/internal-audit" class="btn btn-danger btn-lg w-100 mt-3 service-btn">
+                                Learn More <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All Services Button -->
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                <a href="/services" class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill view-all-btn">
+                    View All US Services <i class="bi bi-grid-3x3-gap ms-2"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- India Services -->
+        <div class="india-only" style="display: none;">
+            <div class="row g-4">
+                <!-- Statutory Audit Service -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-up" data-aos-duration="800">
+                    <div class="service-card h-100 rounded-lg shadow-hover">
+                        <div class="service-img-container">
+                            <img src="assests/services/statutory-audit-india.svg" alt="Statutory Audit Services" class="service-img">
+                            <div class="service-overlay">
+                                <i class="bi bi-file-check service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-icon-wrapper mb-3">
+                                <i class="bi bi-file-check display-4 text-primary"></i>
+                            </div>
+                            <h3 class="h4 service-title">Statutory Audit</h3>
+                            <div class="service-divider"></div>
+                            <p class="service-description">Comprehensive statutory audit services for Indian companies in compliance with Companies Act.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Companies Act Compliance</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>MCA Filing Support</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Board Report Preparation</li>
+                            </ul>
+                            <a href="/services/statutory-audit-india" class="btn btn-primary btn-lg w-100 mt-3 service-btn">
+                                Learn More <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- GST Service -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-up" data-aos-delay="100" data-aos-duration="800">
+                    <div class="service-card h-100 rounded-lg shadow-hover">
+                        <div class="service-img-container">
+                            <img src="assests/services/gst-india.svg" alt="GST Services" class="service-img">
+                            <div class="service-overlay">
+                                <i class="bi bi-receipt service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-icon-wrapper mb-3">
+                                <i class="bi bi-receipt display-4 text-success"></i>
+                            </div>
+                            <h3 class="h4 service-title">GST Services</h3>
+                            <div class="service-divider"></div>
+                            <p class="service-description">Complete GST registration, filing, and compliance services for Indian businesses.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>GST Registration</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Monthly/Quarterly Returns</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>E-way Bill Compliance</li>
+                            </ul>
+                            <a href="/services/gst-india" class="btn btn-success btn-lg w-100 mt-3 service-btn">
+                                Learn More <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Income Tax Service -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-up" data-aos-delay="200" data-aos-duration="800">
+                    <div class="service-card h-100 rounded-lg shadow-hover">
+                        <div class="service-img-container">
+                            <img src="assests/services/income-tax-india.svg" alt="Income Tax Services" class="service-img">
+                            <div class="service-overlay">
+                                <i class="bi bi-calculator service-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-content p-4">
+                            <div class="service-icon-wrapper mb-3">
+                                <i class="bi bi-calculator display-4 text-danger"></i>
+                            </div>
+                            <h3 class="h4 service-title">Income Tax</h3>
+                            <div class="service-divider"></div>
+                            <p class="service-description">Expert Indian income tax planning, filing, and compliance services for individuals and businesses.</p>
+                            <ul class="service-features">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Tax Return Filing</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Tax Planning & Advisory</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Income Tax Notice Handling</li>
+                            </ul>
+                            <a href="/services/income-tax-india" class="btn btn-danger btn-lg w-100 mt-3 service-btn">
+                                Learn More <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All Services Button -->
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                <a href="/services" class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill view-all-btn">
+                    View All Indian Services <i class="bi bi-grid-3x3-gap ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Statistics Section with Country-Specific Stats -->
+    <section class="statistics py-5 bg-light">
+        <div class="container text-center">
+            <!-- USA Statistics -->
+            <div class="usa-only">
+                <h2 data-aos="fade-up">Our US Achievements in Numbers</h2>
+                <div class="row mt-4">
+                    <div class="col-md-3" data-aos="zoom-in">
+                        <h1 class="display-4 text-primary counter-value" data-target="500">0</h1>
+                        <p>US Clients</p>
+                    </div>
+                    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                        <h1 class="display-4 text-success counter-value" data-target="20">0</h1>
+                        <p>US States Served</p>
+                    </div>
+                    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                        <h1 class="display-4 text-danger counter-value" data-target="10">0</h1>
+                        <p>Years in US Market</p>
+                    </div>
+                    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                        <h1 class="display-4 text-info counter-value" data-target="1000">0</h1>
+                        <p>US Tax Returns Filed</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- India Statistics -->
+            <div class="india-only" style="display: none;">
+                <h2 data-aos="fade-up">Our Indian Achievements in Numbers</h2>
+                <div class="row mt-4">
+                    <div class="col-md-3" data-aos="zoom-in">
+                        <h1 class="display-4 text-primary counter-value" data-target="1200">0</h1>
+                        <p>Indian Clients</p>
+                    </div>
+                    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                        <h1 class="display-4 text-success counter-value" data-target="15">0</h1>
+                        <p>Indian States Served</p>
+                    </div>
+                    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                        <h1 class="display-4 text-danger counter-value" data-target="25">0</h1>
+                        <p>Years in Indian Market</p>
+                    </div>
+                    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                        <h1 class="display-4 text-info counter-value" data-target="2500">0</h1>
+                        <p>Statutory Audits Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section with Country-Specific Content -->
+    <section class="testimonials py-5">
+        <div class="container">
+            <!-- USA Testimonials -->
+            <div class="usa-only">
+                <h2 class="text-center mb-5" data-aos="fade-up">What Our US Clients Say</h2>
+                <div class="row">
+                    <div class="col-md-4" data-aos="fade-right">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-chat-quote-fill display-4 text-primary mb-3 floating"></i>
+                                <p>"Uperise Global Advisors transformed our US accounting processes. Their dashboards are a game-changer!"</p>
+                                <h5 class="mt-3">- John Doe, CEO, ABC Corp</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-people-fill display-4 text-success mb-3 floating"></i>
+                                <p>"Their expertise in US taxation saved us thousands in tax liabilities. Highly recommend!"</p>
+                                <h5 class="mt-3">- Sarah Lee, Founder, Fintech Solutions</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-left">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-shield-check display-4 text-danger mb-3 floating"></i>
+                                <p>"We trust Uperise Global Advisors for their accurate US audits and professionalism."</p>
+                                <h5 class="mt-3">- Michael Brown, CFO, RealEstate Inc.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- India Testimonials -->
+            <div class="india-only" style="display: none;">
+                <h2 class="text-center mb-5" data-aos="fade-up">What Our Indian Clients Say</h2>
+                <div class="row">
+                    <div class="col-md-4" data-aos="fade-right">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-chat-quote-fill display-4 text-primary mb-3 floating"></i>
+                                <p>"Uperise Global Advisors's GST expertise has been invaluable for our business compliance in India."</p>
+                                <h5 class="mt-3">- Rajesh Kumar, CEO, Innovate Tech</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-people-fill display-4 text-success mb-3 floating"></i>
+                                <p>"Their statutory audit team is thorough and professional. Made compliance stress-free for us."</p>
+                                <h5 class="mt-3">- Priya Sharma, Director, Global Enterprises</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-left">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-shield-check display-4 text-danger mb-3 floating"></i>
+                                <p>"Company registration process was smooth and efficient with Uperise Global Advisors's expert guidance."</p>
+                                <h5 class="mt-3">- Amit Patel, Founder, NextGen Solutions</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Explore Services Section -->
+<section class="explore-services py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center mb-5">
+                <h2 class="section-title text-white">Explore Our Services</h2>
+                <p class="text-white lead">Download detailed information about our specialized services</p>
+            </div>
+        </div>
+        
+        <div class="usa-only">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="explore-card h-100 bg-white rounded shadow p-4 text-center">
+                        <div class="explore-icon mb-3">
+                            <i class="bi bi-file-earmark-spreadsheet display-4 text-primary"></i>
+                        </div>
+                        <h3 class="h4">US Accounting</h3>
+                        <p>Comprehensive accounting services tailored to US businesses and individuals.</p>
+                        <a href="assests/explore.downloads/us-accounting-services.html" class="btn btn-primary mt-3" target="_blank">
+                            <i class="bi bi-download me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="explore-card h-100 bg-white rounded shadow p-4 text-center">
+                        <div class="explore-icon mb-3">
+                            <i class="bi bi-cash-coin display-4 text-success"></i>
+                        </div>
+                        <h3 class="h4">US Taxation</h3>
+                        <p>Expert tax services for US businesses and individuals to optimize tax positions.</p>
+                        <a href="assests/explore.downloads/us-taxation-services.html" class="btn btn-success mt-3" target="_blank">
+                            <i class="bi bi-download me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="explore-card h-100 bg-white rounded shadow p-4 text-center">
+                        <div class="explore-icon mb-3">
+                            <i class="bi bi-bar-chart-line display-4 text-danger"></i>
+                        </div>
+                        <h3 class="h4">US Auditing</h3>
+                        <p>Comprehensive auditing services that deliver assurance and enhance transparency.</p>
+                        <a href="assests/explore.downloads/us-auditing-services.html" class="btn btn-danger mt-3" target="_blank">
+                            <i class="bi bi-download me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="india-only" style="display: none;">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="explore-card h-100 bg-white rounded shadow p-4 text-center">
+                        <div class="explore-icon mb-3">
+                            <i class="bi bi-file-check display-4 text-danger"></i>
+                        </div>
+                        <h3 class="h4">Statutory Audit</h3>
+                        <p>Comprehensive statutory audit services in compliance with Indian regulations.</p>
+                        <a href="assests/explore.downloads/india-statutory-audit.html" class="btn btn-danger mt-3" target="_blank">
+                            <i class="bi bi-download me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="explore-card h-100 bg-white rounded shadow p-4 text-center">
+                        <div class="explore-icon mb-3">
+                            <i class="bi bi-receipt display-4 text-success"></i>
+                        </div>
+                        <h3 class="h4">GST Services</h3>
+                        <p>Expert GST services to help businesses navigate India's complex indirect tax system.</p>
+                        <a href="assests/explore.downloads/india-gst-services.html" class="btn btn-success mt-3" target="_blank">
+                            <i class="bi bi-download me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="explore-card h-100 bg-white rounded shadow p-4 text-center">
+                        <div class="explore-icon mb-3">
+                            <i class="bi bi-calculator display-4 text-primary"></i>
+                        </div>
+                        <h3 class="h4">Income Tax</h3>
+                        <p>Comprehensive income tax services for individuals and businesses in India.</p>
+                        <a href="assests/explore.downloads/india-income-tax.html" class="btn btn-primary mt-3" target="_blank">
+                            <i class="bi bi-download me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section with Dynamic Content -->
+<section class="cta py-5 text-white gradient-bg">
+    <div class="container text-center">
+        <div data-content-usa="<h2>Ready to Streamline Your US Finances?</h2><p class='lead'>Let Uperise Global Advisors be your trusted partner in US Accounting, Taxation, and Auditing.</p>">
+            <h2>Ready to Streamline Your US Finances?</h2>
+            <p class="lead">Let Uperise Global Advisors be your trusted partner in US Accounting, Taxation, and Auditing.</p>
+        </div>
+        <div data-content-india="<h2>Looking for Expert Indian Financial Services?</h2><p class='lead'>Trust Uperise Global Advisors for all your Statutory Audit, GST, and Income Tax needs in India.</p>" style="display: none;"></div>
+        
+        <div class="mt-4">
+            <a href="/contact" class="btn btn-light btn-lg mt-3">Contact Us Today</a>
+        </div>
+    </div>
+</section>
+
+<!-- Productivity Tools Section -->
+<section class="productivity-tools py-5 bg-light">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <div class="badge-wrapper mb-3" data-aos="fade-down">
+                <span class="badge bg-primary px-3 py-2 rounded-pill">AI-POWERED SOLUTIONS</span>
+            </div>
+            <h2 class="display-4 fw-bold text-gradient mb-3" data-aos="fade-up">Productivity Tools</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
+                Discover our suite of AI-powered tools designed to enhance efficiency and accuracy for finance professionals.
+            </p>
+            <div class="section-divider mx-auto my-4" data-aos="zoom-in" data-aos-delay="200"></div>
+        </div>
+
+        <!-- Tools Grid -->
+        <div class="row g-4">
+            <!-- Tool 1: Audit IQ-AI -->
+            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="800">
+                <div class="tool-card h-100">
+                    <div class="tool-img-wrapper">
+                        <img src="assests/tools/audit-iq-ai.svg" alt="Audit IQ-AI" class="tool-img">
+                        <div class="tool-overlay">
+                            <div class="tool-badge">INTERNAL AUDIT</div>
+                        </div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">Audit IQ-AI</h3>
+                        <div class="tool-divider"></div>
+                        <p class="tool-description">
+                            Revolutionize your internal audit process with AI-powered automation. Audit IQ-AI streamlines workflows, enhances risk assessment, and delivers more accurate audit results.
+                        </p>
+                        <div class="tool-features">
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Automated Risk Assessment</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>AI-Driven Data Analysis</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Smart Audit Planning</span>
+                            </div>
+                        </div>
+                        <a href="https://www.auditiqai.com/" target="_blank" class="btn btn-primary mt-4 tool-btn">
+                            Explore Audit IQ-AI <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tool 2: CA Productivity Tools -->
+            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="tool-card h-100">
+                    <div class="tool-img-wrapper">
+                        <img src="assests/tools/ca-productivity.svg" alt="CA Productivity Tools" class="tool-img">
+                        <div class="tool-overlay">
+                            <div class="tool-badge">AUTOMATION SUITE</div>
+                        </div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">CA Productivity Tools</h3>
+                        <div class="tool-divider"></div>
+                        <p class="tool-description">
+                            A comprehensive suite of automation tools designed specifically for Chartered Accountants. Boost your practice efficiency with specialized solutions for every accounting task.
+                        </p>
+                        <div class="tool-features">
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Workflow Automation</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Document Processing</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Client Management</span>
+                            </div>
+                        </div>
+                        <a href="https://aibyca2.com/" target="_blank" class="btn btn-primary mt-4 tool-btn">
+                            Discover CA Tools <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tool 3: AIBYCA Tool -->
+            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="tool-card h-100">
+                    <div class="tool-img-wrapper">
+                        <img src="assests/tools/aibyca-tool.svg" alt="AIBYCA Tool" class="tool-img">
+                        <div class="tool-overlay">
+                            <div class="tool-badge">TAX SOFTWARE</div>
+                        </div>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">AIBYCA Taxation Tool</h3>
+                        <div class="tool-divider"></div>
+                        <p class="tool-description">
+                            Harness the power of AI for taxation. AIBYCA's intelligent tax software eliminates errors, maximizes deductions, and simplifies even the most complex tax scenarios.
+                        </p>
+                        <div class="tool-features">
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>AI Tax Planning</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Automated Compliance</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Smart Deduction Finding</span>
+                            </div>
+                        </div>
+                        <a href="https://www.aibyca.com/" target="_blank" class="btn btn-primary mt-4 tool-btn">
+                            Explore AIBYCA <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Partners Section with Country-Specific Content -->
+        <!-- India Partners -->
+        <div class="india-only" style="display: none;">
+            <h2 class="text-center mb-4" data-aos="fade-up">Our Indian Partners & Affiliations</h2>
+            <div class="row text-center">
+                <div class="col-4" data-aos="fade-up">
+                    <img src="/static/images/partners/usa-partner1.png" alt="India Partner 1" class="img-fluid">
+                </div>
+                <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/static/images/partners/" alt="India Partner 2" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="team-section py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <div class="badge-wrapper mb-3" data-aos="fade-down">
+                <span class="badge bg-primary px-3 py-2 rounded-pill">OUR EXPERTS</span>
+            </div>
+            <h2 class="display-4 fw-bold text-gradient mb-3" data-aos="fade-up">Meet Our Leadership Team</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
+                Our team of experienced professionals is dedicated to providing exceptional service and expertise.
+            </p>
+            <div class="section-divider mx-auto my-4" data-aos="zoom-in" data-aos-delay="200"></div>
+        </div>
+
+        <!-- Team Members Row -->
+        <div class="row g-4">
+            <!-- Team Member 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="/static/images/team/team_01.jpg" alt="Team Member" class="team-img">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="https://www.linkedin.com/in/ca-praveen-chowdary-710602178/" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://x.com/sompallipravee1" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                <a href="praveen@sompalliandco.com" class="social-icon" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Pavan Sathu</h3>
+                        <div class="team-role">Managing Partner</div>
+                        <div class="team-divider"></div>
+                        <p class="team-bio">With over 10 years of experience in Business Intelligence and Global Business Services (GBS)..</p>
+                        <div class="team-expertise">
+                            <span class="expertise-tag">US GAAP</span>
+                            <span class="expertise-tag">Taxation</span>
+                            <span class="expertise-tag">Audit</span>
+                            <span class="expertise-tag">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="/static/images/team/team_02.jpg" alt="Team Member" class="team-img">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="social-icon" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Sandeep</h3>
+                        <div class="team-role">Tax Manager</div>
+                        <div class="team-divider"></div>
+                        <p class="team-bio">Teju specializes in international tax planning and compliance, helping clients navigate complex tax regulations.</p>
+                        <div class="team-expertise">
+                            <span class="expertise-tag">Tax Planning</span>
+                            <span class="expertise-tag">IRS Compliance</span>
+                            <span class="expertise-tag">International Tax</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="/static/images/team/team_03.jpg" alt="Team Member" class="team-img">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="social-icon" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Revanth</h3>
+                        <div class="team-role">Audit Manager</div>
+                        <div class="team-divider"></div>
+                        <p class="team-bio">Sandeep brings extensive experience in audit and assurance services, focusing on risk assessment and internal controls.</p>
+                        <div class="team-expertise">
+                            <span class="expertise-tag">Internal Audit</span>
+                            <span class="expertise-tag">Risk Assessment</span>
+                            <span class="expertise-tag">SOX Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team CTA -->
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+            <a href="/about" class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill view-all-btn">
+                Meet The Full Team <i class="bi bi-people ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Video Resources Section -->
+<section class="video-resources py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <div class="badge-wrapper mb-3" data-aos="fade-down">
+                <span class="badge bg-primary px-3 py-2 rounded-pill">EXPERTISE VIDEOS</span>
+            </div>
+            <h2 class="display-4 fw-bold text-gradient mb-3" data-aos="fade-up">Financial Technology Insights</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
+                Explore our latest videos on technology solutions, AI implementation, and productivity tools for finance professionals.
+            </p>
+            <div class="section-divider mx-auto my-4" data-aos="zoom-in" data-aos-delay="200"></div>
+        </div>
+
+        
+
+        <!-- Featured Blog Post -->
+        
+        <div class="featured-post mb-5" data-aos="fade-up" data-aos-duration="800">
+            <div class="card featured-post-card">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <div class="featured-post-img">
+                            
+                            <img src="/blog/image/1745237703_Tax_Deductions_in_USA_1.png" class="img-fluid featured-img" alt="Top 10 Tax Deductions for Small Businesses in the USA">
+                            
+                            <div class="featured-overlay">
+                                <span class="featured-badge">FEATURED</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-body featured-content">
+                            <div class="blog-meta">
+                                <span class="blog-category"><i class="bi bi-bookmark-fill me-1"></i>Taxation</span>
+                                <span class="blog-date"><i class="bi bi-calendar3 me-1"></i>Apr 21, 2025</span>
+                            </div>
+                            <h3 class="card-title blog-title">Top 10 Tax Deductions for Small Businesses in the USA</h3>
+                            <p class="card-text blog-excerpt">
+                                Running a small business in the United States comes with numerous responsibilities—and tax planning is one of the most critical. Fortunately, the IRS provides a variety of tax deductions that can significantly reduce your taxable income and help you reinvest more into your business. Here are the top 10 tax deductions that every small business owner should be aware of:
+                            </p>
+                            <div class="blog-author d-flex align-items-center">
+                                
+                                <img src="/author/image/1745064821_team_01.jpg" alt="Pavan Sathu" class="author-img me-2">
+                                
+                                <span class="author-name">By Pavan Sathu</span>
+                            </div>
+                            <a href="/blog/top-10-tax-deductions-for-small-businesses-in-the-usa" class="btn btn-primary mt-3 read-more-btn">
+                                Read Article <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Recent Blog Posts -->
+        <div class="row g-4">
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-card h-100">
+                    <div class="blog-img-wrapper">
+                        
+                        <img src="/blog/image/1748083876_GST_Refund_Blog.png" alt="Complete Guide: GST Refund for Software Services Export in India" class="blog-img">
+                        
+                        <div class="blog-date-badge">
+                            <span class="date-day">24</span>
+                            <span class="date-month">May</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category"><i class="bi bi-bookmark-fill me-1"></i>Indirect Taxation</span>
+                            <span class="blog-read-time"><i class="bi bi-clock me-1"></i>5 min read</span>
+                        </div>
+                        <h3 class="blog-title">Complete Guide: GST Refund for Software Services Export in India</h3>
+                        <p class="blog-excerpt">
+                            All Types of GST Refunds in India – A Complete Guide with Sections &amp; Rules
+                        </p>
+                        <div class="blog-footer d-flex justify-content-between align-items-center">
+                            <div class="blog-author d-flex align-items-center">
+                                
+                                <img src="/author/image/1745064849_1745054657_team_03.jpg" alt="Sandeep" class="author-img me-2">
+                                
+                                <span class="author-name">Sandeep</span>
+                            </div>
+                            <a href="/blog/complete-guide-gst-refund-for-software-services-export-in-india" class="blog-link">
+                                Read More <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-card h-100">
+                    <div class="blog-img-wrapper">
+                        
+                        <img src="/blog/image/1747992232_TDS_Rates_Chart_FY_2025-26_1.png" alt="TDS Rate Chart for FY 2025-26 (Assessment Year 2026-27)" class="blog-img">
+                        
+                        <div class="blog-date-badge">
+                            <span class="date-day">23</span>
+                            <span class="date-month">May</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category"><i class="bi bi-bookmark-fill me-1"></i>Taxation</span>
+                            <span class="blog-read-time"><i class="bi bi-clock me-1"></i>5 min read</span>
+                        </div>
+                        <h3 class="blog-title">TDS Rate Chart for FY 2025-26 (Assessment Year 2026-27)</h3>
+                        <p class="blog-excerpt">
+                            Effective from 1st April 2025
+ Key Changes in TDS for FY 2025-26
+                        </p>
+                        <div class="blog-footer d-flex justify-content-between align-items-center">
+                            <div class="blog-author d-flex align-items-center">
+                                
+                                <img src="/author/image/1745064849_1745054657_team_03.jpg" alt="Sandeep" class="author-img me-2">
+                                
+                                <span class="author-name">Sandeep</span>
+                            </div>
+                            <a href="/blog/tds-rate-chart-for-fy-2025-26-assessment-year-2026-27" class="blog-link">
+                                Read More <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="blog-card h-100">
+                    <div class="blog-img-wrapper">
+                        
+                        <img src="/blog/image/1747049365_Credit_Note_in_case_of_Exports_1.png" alt="🚢 Returned Export Goods after IGST Refund: Can You Issue a GST Credit Note?" class="blog-img">
+                        
+                        <div class="blog-date-badge">
+                            <span class="date-day">12</span>
+                            <span class="date-month">May</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category"><i class="bi bi-bookmark-fill me-1"></i>Indirect Taxation</span>
+                            <span class="blog-read-time"><i class="bi bi-clock me-1"></i>5 min read</span>
+                        </div>
+                        <h3 class="blog-title">🚢 Returned Export Goods after IGST Refund: Can You Issue a GST Credit Note?</h3>
+                        <p class="blog-excerpt">
+                            In the complex landscape of GST compliance, one common dilemma arises when exported goods are returned by the foreign buyer after IGST has already been paid and refund has been claimed. A key question is:
+
+Can a GST credit note be issued under Section 34 of the CGST Act in such a case?
+
+The answer is No — and this article comprehensively explains why, along with legal references, practical treatment, and alternate solutions for businesses and consultants.
+                        </p>
+                        <div class="blog-footer d-flex justify-content-between align-items-center">
+                            <div class="blog-author d-flex align-items-center">
+                                
+                                <img src="/author/image/1745064821_team_01.jpg" alt="Pavan Sathu" class="author-img me-2">
+                                
+                                <span class="author-name">Pavan Sathu</span>
+                            </div>
+                            <a href="/blog/-returned-export-goods-after-igst-refund-can-you-issue-a-gst-credit-note" class="blog-link">
+                                Read More <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- No Posts Message -->
+        
+
+        <!-- Blog CTA -->
+        
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+            <a href="/blog" class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill view-all-btn">
+                View All Articles <i class="bi bi-journal-text ms-2"></i>
+            </a>
+        </div>
+        
+    </div>
+</section>
+
+
+<!-- Newsletter Section -->
+<section class="newsletter py-5 bg-secondary text-white">
+    <div class="container text-center">
+        <h2 class="usa-only">Stay Updated with US Tax & Accounting News</h2>
+        <h2 class="india-only" style="display: none;">Stay Updated with Indian GST & Tax News</h2>
+        
+        <p class="lead usa-only">Subscribe to our newsletter for the latest updates on US accounting, tax laws, and financial insights.</p>
+        <p class="lead india-only" style="display: none;">Subscribe to our newsletter for the latest updates on Indian GST, taxation, and statutory regulations.</p>
+        
+        <form class="row g-3 justify-content-center mt-3" action="/subscribe" method="POST">
+            <div class="col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary btn-lg w-100">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+  
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand mb-3">
+                        <img src="/assests/logo2.png" alt="Uperise Global Advisors Logo" class="footer-logo">
+                        <h5 class="mt-3">Uperise Global Advisors</h5>
+                    </div>
+                    <p>Your trusted partner for accounting, taxation, and auditing services with a commitment to excellence and integrity.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon me-3" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="/services/accounting">Accounting</a></li>
+                        <li><a href="/services/taxation">Taxation</a></li>
+                        <li><a href="/services/internal-audit">Internal Audit</a></li>
+                        <li><a href="/services/statutory-audit">Statutory Audit</a></li>
+                        <li><a href="/services/financial-statements">Financial Statements</a></li>
+                        <li><a href="/services/technology-audit">Technology Audit</a></li>
+                        <li><a href="/services/technology-development">Technology Development</a></li>
+                        <li><a href="/services/registration/all">Registration Services</a></li>
+                        <li><a href="/services/data-analysis">Data Analysis Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <address class="footer-contact">
+                        <p><i class="bi bi-geo-alt-fill me-2"></i> Floor No.: 3rd Floor<br>
+                            Building No./Flat No.: 25-2-1035<br>
+                            Street: RR Nagar, 1th Street<br>
+                            Opp Old Railway Gate, Vedyapalem<br>
+                            Nellore-524004</p>
+                        <p><i class="bi bi-envelope-fill me-2"></i> <a href="mailto:admin@uperise.com">admin@uperise.com</a></p>
+                        <p><i class="bi bi-telephone-fill me-2"></i> <a href="tel:+917674050595">+91 7674050595</a></p>
+                    </address>
+                </div>
+            </div>
+            <hr class="footer-divider my-3">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Uperise Global Advisors. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <p class="mb-0">
+                        <a href="#" class="me-3">Privacy Policy</a>
+                        <a href="#" class="me-3">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   <!-- Back to top button -->
+    <a href="#" id="back-to-top" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <!-- JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Responsive behavior enhancement script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Handle responsive navigation
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        if (navbarToggler && navbarCollapse) {
+            // Close navbar when clicking outside
+            document.addEventListener('click', function(event) {
+                const isNavbarOpen = navbarCollapse.classList.contains('show');
+                const clickedInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+                
+                if (isNavbarOpen && !clickedInsideNavbar) {
+                    // Use Bootstrap's collapse API to close the navbar
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                        toggle: false
+                    });
+                    bsCollapse.hide();
+                }
+            });
+            
+            // Close navbar when a nav link is clicked (for mobile)
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Only close if we're in mobile view
+                    if (window.innerWidth < 992) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        }
+        
+        // Responsive image loading
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        if ('loading' in HTMLImageElement.prototype) {
+            // Browser supports native lazy loading
+            lazyImages.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        observer.unobserve(lazyImage);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => {
+                lazyImageObserver.observe(img);
+            });
+        }
+        
+        // Responsive tables
+        const tables = document.querySelectorAll('table');
+        tables.forEach(table => {
+            // Wrap tables in a responsive container if not already wrapped
+            if (!table.parentElement.classList.contains('table-responsive')) {
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('table-responsive');
+                table.parentNode.insertBefore(wrapper, table);
+                wrapper.appendChild(table);
+            }
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
+<script src="/static/js/typewriter.js"></script>
+<script src="/static/js/animations.js"></script>
+<script src="/static/js/hero-animations.js"></script>
+<script src="/static/js/country-switcher.js"></script>
+<script src="/static/js/tax-audit-scripts.js"></script>
+<script src="/static/js/GST-scripts.js"></script>
+<script src="/static/js/blog-formatting.js"></script>
+<script src="/static/js/visitor-tracking.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preloader
+            setTimeout(function() {
+                document.getElementById('preloader').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('preloader').style.display = 'none';
+                }, 500);
+            }, 1000);
+            
+            // Initialize AOS animations
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Navbar scrolled effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Back to top button
+            const backToTop = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('active');
+                } else {
+                    backToTop.classList.remove('active');
+                }
+            });
+            
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Theme toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            
+            // Check for saved theme
+            const exploreSection = document.querySelector('.explore-services');
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-theme');
+                themeToggle.checked = true;
+                
+                // Initialize explore services for dark theme
+                if (exploreSection) {
+                    exploreSection.style.animation = 'none';
+                    exploreSection.style.backgroundImage = 'none';
+                }
+            } else {
+                // Initialize explore services for light theme
+                if (exploreSection) {
+                    exploreSection.style.backgroundImage = 'url("assests/explore-bg.svg")';
+                    exploreSection.style.animation = 'backgroundAnimation 30s ease-in-out infinite alternate';
+                    
+                    // Initialize parallax effect
+                    setTimeout(() => {
+                        handleParallax();
+                    }, 100);
+                }
+            }
+            
+            themeToggle.addEventListener('change', function() {
+                const exploreSection = document.querySelector('.explore-services');
+                
+                if (this.checked) {
+                    // Switch to dark theme
+                    body.classList.add('dark-theme');
+                    localStorage.setItem('theme', 'dark');
+                    
+                    // Stop background animation for explore services in dark mode
+                    if (exploreSection) {
+                        exploreSection.style.animation = 'none';
+                        exploreSection.style.backgroundImage = 'none';
+                        exploreSection.style.backgroundPositionY = '0';
+                    }
+                } else {
+                    // Switch to light theme
+                    body.classList.remove('dark-theme');
+                    localStorage.setItem('theme', 'light');
+                    
+                    // Restore background animation for explore services in light mode
+                    if (exploreSection) {
+                        exploreSection.style.backgroundImage = 'url("assests/explore-bg.svg")';
+                        exploreSection.style.animation = 'backgroundAnimation 30s ease-in-out infinite alternate';
+                        
+                        // Reset parallax effect
+                        setTimeout(() => {
+                            handleParallax();
+                        }, 100);
+                    }
+                }
+            });
+            
+            // Flash message auto-dismiss
+            setTimeout(function() {
+                const flashMessages = document.querySelectorAll('.flash-message');
+                flashMessages.forEach(function(message) {
+                    message.classList.remove('animate__fadeInDown');
+                    message.classList.add('animate__fadeOutUp');
+                    setTimeout(function() {
+                        message.remove();
+                    }, 1000);
+                });
+            }, 5000);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load particles.js if it's not already loaded
+            if (typeof particlesJS === 'undefined') {
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js';
+                script.onload = initParticles;
+                document.body.appendChild(script);
+            } else {
+                initParticles();
+            }
+            
+            // Initialize particles
+            function initParticles() {
+                if (document.getElementById('particles-js')) {
+                    particlesJS('particles-js', {
+                        "particles": {
+                            "number": {
+                                "value": 80,
+                                "density": {
+                                    "enable": true,
+                                    "value_area": 800
+                                }
+                            },
+                            "color": {
+                                "value": "#ffffff"
+                            },
+                            "shape": {
+                                "type": "circle",
+                                "stroke": {
+                                    "width": 0,
+                                    "color": "#000000"
+                                },
+                                "polygon": {
+                                    "nb_sides": 5
+                                }
+                            },
+                            "opacity": {
+                                "value": 0.3,
+                                "random": true,
+                                "anim": {
+                                    "enable": true,
+                                    "speed": 1,
+                                    "opacity_min": 0.1,
+                                    "sync": false
+                                }
+                            },
+                            "size": {
+                                "value": 3,
+                                "random": true,
+                                "anim": {
+                                    "enable": true,
+                                    "speed": 2,
+                                    "size_min": 0.1,
+                                    "sync": false
+                                }
+                            },
+                            "line_linked": {
+                                "enable": true,
+                                "distance": 150,
+                                "color": "#ffffff",
+                                "opacity": 0.2,
+                                "width": 1
+                            },
+                            "move": {
+                                "enable": true,
+                                "speed": 1,
+                                "direction": "none",
+                                "random": true,
+                                "straight": false,
+                                "out_mode": "out",
+                                "bounce": false,
+                                "attract": {
+                                    "enable": false,
+                                    "rotateX": 600,
+                                    "rotateY": 1200
+                                }
+                            }
+                        },
+                        "interactivity": {
+                            "detect_on": "canvas",
+                            "events": {
+                                "onhover": {
+                                    "enable": true,
+                                    "mode": "grab"
+                                },
+                                "onclick": {
+                                    "enable": true,
+                                    "mode": "push"
+                                },
+                                "resize": true
+                            },
+                            "modes": {
+                                "grab": {
+                                    "distance": 140,
+                                    "line_linked": {
+                                        "opacity": 0.6
+                                    }
+                                },
+                                "push": {
+                                    "particles_nb": 4
+                                }
+                            }
+                        },
+                        "retina_detect": true
+                    });
+                }
+            }
+        });
+        </script>
+        
+        <!-- Add this CSS to your hero-animations.css file -->
+        <style>
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .network-bg {
+            background-color: #1a237e; /* Dark blue like in your image */
+            position: relative;
+        }
+        
+        /* Make sure hero content is above particles */
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+        </style>
+
+    <!-- Custom page scripts -->
+    
+<!-- Include base scripts -->
+
+
+<!-- Include country switcher script -->
+<script src="/static/js/country-switcher.js"></script>
+
+<!-- Initialize counters -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Re-initialize counter animations when country is switched
+        document.addEventListener('countryChanged', function() {
+            initCounterAnimations();
+        });
+        
+        function initCounterAnimations() {
+            const counterElements = document.querySelectorAll('.counter-value');
+            
+            counterElements.forEach(function(element) {
+                const target = parseInt(element.getAttribute('data-target'));
+                let count = 0;
+                const duration = 2000; // 2 seconds
+                const frameDuration = 1000 / 60; // 60fps
+                const totalFrames = Math.round(duration / frameDuration);
+                const increment = target / totalFrames;
+                
+                // Reset counter first
+                element.textContent = '0';
+                element.classList.remove('counted');
+                
+                // Use IntersectionObserver to start counting when visible
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting && !element.classList.contains('counted')) {
+                            let currentCount = 0;
+                            
+                            const counter = setInterval(function() {
+                                currentCount += increment;
+                                
+                                if (currentCount >= target) {
+                                    element.textContent = target;
+                                    clearInterval(counter);
+                                } else {
+                                    element.textContent = Math.floor(currentCount);
+                                }
+                            }, frameDuration);
+                            
+                            element.classList.add('counted');
+                            observer.unobserve(element);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(element);
+            });
+        }
+        
+        // Initialize on page load
+        initCounterAnimations();
+    });
+
+// Video Section Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Create video modal if it doesn't exist
+    if (!document.getElementById('videoModal')) {
+        const modalHTML = `
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="videoModalLabel">Video</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ratio ratio-16x9">
+                                <iframe id="videoFrame" src="" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+    }
+
+    // Initialize video modal
+    const videoModal = document.getElementById('videoModal');
+    const modalInstance = new bootstrap.Modal(videoModal);
+    const videoFrame = document.getElementById('videoFrame');
+    const videoTitle = document.getElementById('videoModalLabel');
+    
+    // Handle video card clicks
+    document.querySelectorAll('.video-card').forEach(card => {
+        // Make entire card clickable
+        card.addEventListener('click', function(e) {
+            // If they clicked on the button itself, let the button handler take over
+            if (e.target.closest('.watch-video-btn')) {
+                return;
+            }
+            
+            // Otherwise handle the card click
+            e.preventDefault();
+            const videoBtn = this.querySelector('.watch-video-btn');
+            if (videoBtn) {
+                const videoId = videoBtn.getAttribute('data-video-id');
+                const videoTitleText = this.querySelector('.video-title').textContent;
+                
+                openVideoModal(videoId, videoTitleText);
+            }
+        });
+    });
+    
+    // Handle watch video button clicks
+    document.querySelectorAll('.watch-video-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const videoId = this.getAttribute('data-video-id');
+            const videoTitleText = this.closest('.video-card').querySelector('.video-title').textContent;
+            
+            openVideoModal(videoId, videoTitleText);
+        });
+    });
+    
+    // Function to open video modal
+    function openVideoModal(videoId, title) {
+        // Update modal content
+        videoTitle.textContent = title;
+        videoFrame.src = ``;
+        
+        // Show modal
+        modalInstance.show();
+        
+        // Track video view (optional)
+        if (typeof trackVideoView === 'function') {
+            trackVideoView(videoId, title);
+        }
+    }
+    
+    // Reset iframe when modal is closed to stop video playback
+    videoModal.addEventListener('hidden.bs.modal', function () {
+        videoFrame.src = '';
+    });
+
+    // Optional: Add lazy loading for video thumbnails
+    if ('loading' in HTMLImageElement.prototype) {
+        document.querySelectorAll('.video-card img').forEach(img => {
+            img.loading = 'lazy';
+        });
+    }
+    
+    // Country switcher integration - refresh video content if needed
+    if (typeof document.addEventListener === 'function') {
+        document.addEventListener('countryChanged', function(e) {
+            // If you have country-specific videos, you could update them here
+            console.log('Country changed to: ' + e.detail.country);
+            
+            // Example of how you might update video content based on country
+            // updateVideosByCountry(e.detail.country);
+        });
+    }
+    
+    // Optional: implement video view tracking
+    function trackVideoView(videoId, title) {
+        // This could send analytics data if needed
+        console.log(`Video viewed: ${title} (${videoId})`);
+        
+        // Example of sending to Google Analytics (if available)
+        if (typeof gtag === 'function') {
+            gtag('event', 'video_view', {
+                'video_id': videoId,
+                'video_title': title
+            });
+        }
+    }
+    
+    // Initialize animation on visible video cards
+    const observeVideos = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                observeVideos.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    document.querySelectorAll('.video-card').forEach(card => {
+        observeVideos.observe(card);
+    });
+    
+    // Enhanced video preview functionality 
+    document.querySelectorAll('.video-card').forEach(card => {
+        const videoId = card.querySelector('.watch-video-btn').getAttribute('data-video-id');
+        
+        // Create thumbnail previews if available
+        if (videoId) {
+            // Get the video wrapper
+            const wrapper = card.querySelector('.video-wrapper');
+            
+            // Create a thumbnail container
+            const thumbnailContainer = document.createElement('div');
+            thumbnailContainer.className = 'thumbnail-container';
+            thumbnailContainer.style.position = 'absolute';
+            thumbnailContainer.style.top = '0';
+            thumbnailContainer.style.left = '0';
+            thumbnailContainer.style.width = '100%';
+            thumbnailContainer.style.height = '100%';
+            thumbnailContainer.style.backgroundColor = '#000';
+            thumbnailContainer.style.zIndex = '1';
+            
+            // Create the thumbnail image
+            const img = document.createElement('img');
+            // Use maxresdefault for best quality or hqdefault as fallback
+            img.src = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            
+            // Add error handling to fall back to hqdefault if maxresdefault doesn't exist
+            img.onerror = function() {
+                this.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+            };
+            
+            // Create play button overlay
+            const playButton = document.createElement('div');
+            playButton.className = 'play-button-overlay';
+            playButton.innerHTML = '<i class="bi bi-play-circle-fill"></i>';
+            playButton.style.position = 'absolute';
+            playButton.style.top = '50%';
+            playButton.style.left = '50%';
+            playButton.style.transform = 'translate(-50%, -50%)';
+            playButton.style.fontSize = '4rem';
+            playButton.style.color = 'white';
+            playButton.style.opacity = '0.8';
+            playButton.style.transition = 'all 0.3s ease';
+            playButton.style.zIndex = '2';
+            playButton.style.textShadow = '0 0 10px rgba(0,0,0,0.5)';
+            
+            // Add hover effect to play button
+            thumbnailContainer.addEventListener('mouseenter', () => {
+                playButton.style.opacity = '1';
+                playButton.style.transform = 'translate(-50%, -50%) scale(1.1)';
+            });
+            
+            thumbnailContainer.addEventListener('mouseleave', () => {
+                playButton.style.opacity = '0.8';
+                playButton.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+            
+            // Add click handler to thumbnail
+            thumbnailContainer.addEventListener('click', () => {
+                // Find the watch button and trigger its click event
+                const watchBtn = card.querySelector('.watch-video-btn');
+                if (watchBtn) {
+                    watchBtn.click();
+                }
+            });
+            
+            // Append elements
+            thumbnailContainer.appendChild(img);
+            thumbnailContainer.appendChild(playButton);
+            
+            // Add to wrapper
+            if (wrapper) {
+                wrapper.style.position = 'relative';
+                wrapper.appendChild(thumbnailContainer);
+                
+                // Hide the iframe by default
+                const iframe = wrapper.querySelector('iframe');
+                if (iframe) {
+                    iframe.style.opacity = '0';
+                    // Only load the iframe when clicked
+                    iframe.setAttribute('data-src', iframe.src);
+                    iframe.removeAttribute('src');
+                }
+            }
+        }
+    });
+    
+    // Update video modal function to ensure iframe loads correctly
+    function openVideoModal(videoId, title) {
+        // Update modal content
+        videoTitle.textContent = title;
+        videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        
+        // Show modal
+        modalInstance.show();
+        
+        // Track video view (optional)
+        if (typeof trackVideoView === 'function') {
+            trackVideoView(videoId, title);
+        }
+    }
+    
+    // Global function to refresh the page with animation
+    window.refreshPage = function(element) {
+        // Add a spinning animation to the logo
+        const logoContainer = element.querySelector('.logo-container');
+        if (logoContainer) {
+            logoContainer.classList.add('logo-spin');
+        }
+        
+        // Add a fade-out effect to the whole page
+        document.body.style.transition = 'opacity 0.8s ease';
+        document.body.style.opacity = '0.5';
+        
+        // Reload the page after animation completes
+        setTimeout(function() {
+            window.location.reload();
+        }, 800);
+        
+        return false; // Prevent default link behavior
+    };
+    
+    // Parallax effect for explore services section
+    function handleParallax() {
+        const exploreSection = document.querySelector('.explore-services');
+        if (!exploreSection) return;
+        
+        // Only apply parallax in light mode
+        if (document.body.classList.contains('dark-theme')) return;
+        
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            const sectionPosition = exploreSection.offsetTop;
+            const sectionHeight = exploreSection.offsetHeight;
+            
+            // Check if section is in viewport
+            if (scrollPosition > sectionPosition - window.innerHeight && 
+                scrollPosition < sectionPosition + sectionHeight) {
+                
+                // Calculate parallax effect
+                const yPos = -(scrollPosition - sectionPosition) / 5;
+                exploreSection.style.backgroundPositionY = yPos + 'px';
+            }
+        });
+    }
+    
+    // Initialize parallax effect
+    handleParallax();
+});
+</script>
+
+</body>
+</html>
