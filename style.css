@@ -47,7 +47,7 @@ h6 {
 
 /* Header styles */
 .navbar {
-  background-color: white;
+  background-color: var(--navbar-blue) !important;
   box-shadow: var(--box-shadow);
   padding: 0.5rem 1rem;
   position: relative;
@@ -68,18 +68,68 @@ h6 {
   object-fit: contain;
 }
 
+/* Navbar items alignment */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0 2px;
+}
+
 .nav-link {
-  color: var(--text-color);
+  color: white !important;
   font-weight: 500;
   transition: var(--transition);
+  padding: 0.5rem 0.8rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .navbar-toggler {
   border: none;
+}
+
+/* Country selector styling */
+.country-selector .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.country-flag img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* Theme switch alignment */
+.theme-switch-wrapper {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Responsive adjustments for navbar */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--navbar-blue);
+    padding: 1rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+  
+  .navbar-nav {
+    align-items: flex-start;
+  }
+  
+  .nav-item {
+    margin: 5px 0;
+  }
 }
 
 /* Hero section */
