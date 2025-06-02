@@ -47,7 +47,7 @@ h6 {
 
 /* Header styles */
 .navbar {
-  background-color: var(--navbar-blue) !important;
+  background-color: var(--navbar-blue, #0d47a1) !important;
   box-shadow: var(--box-shadow);
   padding: 0.5rem 1rem;
   position: relative;
@@ -68,24 +68,23 @@ h6 {
   object-fit: contain;
 }
 
-/* Navbar items alignment */
-.navbar-nav {
-  display: flex;
-  align-items: center;
+/* Fix for nested navbar-nav */
+.navbar-nav .navbar-nav {
+  flex-direction: row;
+  margin-left: 0 !important;
 }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-  margin: 0 2px;
+/* Fix for Resources dropdown */
+.navbar-nav .navbar-nav .nav-item {
+  margin-right: 10px;
 }
 
 .nav-link {
   color: white !important;
   font-weight: 500;
   transition: var(--transition);
-  padding: 0.5rem 0.8rem;
-  font-size: 0.95rem;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
   white-space: nowrap;
 }
 
@@ -111,25 +110,7 @@ h6 {
 
 /* Theme switch alignment */
 .theme-switch-wrapper {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-/* Responsive adjustments for navbar */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    background-color: var(--navbar-blue);
-    padding: 1rem;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-  }
-  
-  .navbar-nav {
-    align-items: flex-start;
-  }
-  
-  .nav-item {
-    margin: 5px 0;
-  }
+  margin: 0 5px;
 }
 
 /* Hero section */
@@ -302,5 +283,26 @@ h1, h2, h3, h4, h5, h6 {
   
   img {
     transform: none;
+  }
+}
+
+/* Mobile navbar fixes */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--navbar-blue, #0d47a1);
+    padding: 1rem;
+    border-radius: 0 0 var(--border-radius, 8px) var(--border-radius, 8px);
+  }
+  
+  .navbar-nav {
+    flex-direction: column !important;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
+  
+  .theme-switch-wrapper {
+    margin: 10px 0;
   }
 }

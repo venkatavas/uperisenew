@@ -54,6 +54,32 @@
             --transition-speed: 0.3s;
             --navbar-blue: #0d47a1; /* Blue color for navbar */
             
+        /* Fix for navbar layout */
+        @media (min-width: 992px) {
+            .navbar-nav {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            /* Fix for nested navbar */
+            .navbar-nav .navbar-nav {
+                margin-left: 0 !important;
+            }
+            
+            /* Ensure all items are visible */
+            .nav-item {
+                white-space: nowrap;
+            }
+            
+            /* Make sure theme switch is properly aligned */
+            .theme-switch-wrapper {
+                display: flex;
+                align-items: center;
+                margin: 0 5px;
+            }
+        }
+            
             /* Responsive font sizes */
             --h1-font-size: clamp(2rem, 5vw, 3.5rem);
             --h2-font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -1054,7 +1080,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link nav-link-animated" href="/">Home</a>
                     </li>
@@ -1080,7 +1106,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li class="nav-item">
                         <a class="nav-link nav-link-animated" href="/contact">Contact</a>
                     </li>
-                    <!-- Resources Dropdown -->
+                    <li class="nav-item">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="theme-toggle">
+                                <input type="checkbox" id="theme-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
+                                    <!-- Resources Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Resources
@@ -1112,14 +1146,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="theme-toggle">
-                                <input type="checkbox" id="theme-toggle">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
                     </li>
                 </ul>
             </div>
