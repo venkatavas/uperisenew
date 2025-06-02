@@ -1,0 +1,11 @@
+/*
+  Clear-Site-Data: "cache"
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/index.html
+  Clear-Site-Data: "cache"
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/uperiseindia.html
+  Clear-Site-Data: "cache"
+  Cache-Control: no-cache, no-store, must-revalidate
