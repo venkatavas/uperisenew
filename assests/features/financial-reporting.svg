@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#f44336"/>
+  <text x="100" y="70" font-family="Arial" font-size="22" fill="white" text-anchor="middle">Financial</text>
+  <text x="100" y="100" font-family="Arial" font-size="22" fill="white" text-anchor="middle">Reporting</text>
+  <!-- Bar chart -->
+  <rect x="50" y="120" width="20" height="60" fill="#ffffff"/>
+  <rect x="80" y="110" width="20" height="70" fill="#ffffff"/>
+  <rect x="110" y="130" width="20" height="50" fill="#ffffff"/>
+  <rect x="140" y="100" width="20" height="80" fill="#ffffff"/>
+  <!-- Line -->
+  <path d="M50,180 L160,180" stroke="#ffc107" stroke-width="4"/>
+</svg>

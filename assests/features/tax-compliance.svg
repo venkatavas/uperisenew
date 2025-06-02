@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#4caf50"/>
+  <text x="100" y="80" font-family="Arial" font-size="24" fill="white" text-anchor="middle">US Tax</text>
+  <text x="100" y="110" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Compliance</text>
+  <path d="M60,130 L140,130 L140,150 L60,150 Z" fill="#ffc107"/>
+  <path d="M90,90 L110,90 L110,170 L90,170 Z" fill="#ffffff"/>
+  <circle cx="100" cy="60" r="20" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#4caf50"/>
+  <text x="150" y="50" font-family="Arial" font-size="24" fill="white" text-anchor="middle">CA Productivity</text>
+  <text x="150" y="80" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Tools</text>
+  
+  <!-- Productivity chart -->
+  <line x1="80" y1="160" x2="220" y2="160" stroke="#ffffff" stroke-width="3"/>
+  <line x1="80" y1="160" x2="80" y2="100" stroke="#ffffff" stroke-width="3"/>
+  
+  <!-- Bars representing increasing productivity -->
+  <rect x="100" y="140" width="20" height="20" fill="#ffc107"/>
+  <rect x="130" y="130" width="20" height="30" fill="#ffc107"/>
+  <rect x="160" y="120" width="20" height="40" fill="#ffc107"/>
+  <rect x="190" y="110" width="20" height="50" fill="#ffc107"/>
+  
+  <!-- Gear icon -->
+  <circle cx="240" cy="120" r="15" fill="#ffffff"/>
+  <circle cx="240" cy="120" r="8" fill="#4caf50"/>
+  <path d="M240,105 L240,100 M240,140 L240,135 M225,120 L220,120 M260,120 L255,120 M228,108 L224,104 M256,136 L252,132 M228,132 L224,136 M256,104 L252,108" stroke="#ffffff" stroke-width="3"/>
+</svg>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d47a1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1e88e5" stop-opacity="0.8"/>
+    </linearGradient>
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)"/>
+  <rect width="1200" height="600" fill="url(#grid-pattern)"/>
+  
+  <!-- Abstract shapes -->
+  <circle cx="200" cy="150" r="100" fill="#ffffff" fill-opacity="0.05"/>
+  <circle cx="1000" cy="450" r="150" fill="#ffffff" fill-opacity="0.05"/>
+  
+  <!-- Document icons -->
+  <g transform="translate(300, 200)">
+    <rect x="0" y="0" width="60" height="80" rx="5" fill="#ffffff" fill-opacity="0.2"/>
+    <line x1="10" y1="20" x2="50" y2="20" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="10" y1="30" x2="50" y2="30" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="10" y1="40" x2="50" y2="40" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="10" y1="50" x2="30" y2="50" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(800, 300)">
+    <rect x="0" y="0" width="60" height="80" rx="5" fill="#ffffff" fill-opacity="0.2"/>
+    <line x1="10" y1="20" x2="50" y2="20" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="10" y1="30" x2="50" y2="30" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="10" y1="40" x2="50" y2="40" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="10" y1="50" x2="30" y2="50" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+  </g>
+  
+  <!-- Connecting lines -->
+  <path d="M 400 250 C 500 200, 600 300, 700 250" stroke="#ffffff" stroke-width="2" stroke-opacity="0.3" fill="none"/>
+  <path d="M 500 400 C 600 350, 700 450, 800 400" stroke="#ffffff" stroke-width="2" stroke-opacity="0.3" fill="none"/>
+  
+  <!-- Dots pattern -->
+  <g fill="#ffffff" fill-opacity="0.2">
+    <circle cx="100" cy="100" r="3"/>
+    <circle cx="150" cy="100" r="3"/>
+    <circle cx="200" cy="100" r="3"/>
+    <circle cx="100" cy="150" r="3"/>
+    <circle cx="150" cy="150" r="3"/>
+    <circle cx="200" cy="150" r="3"/>
+    <circle cx="100" cy="200" r="3"/>
+    <circle cx="150" cy="200" r="3"/>
+    <circle cx="200" cy="200" r="3"/>
+    
+    <circle cx="900" cy="400" r="3"/>
+    <circle cx="950" cy="400" r="3"/>
+    <circle cx="1000" cy="400" r="3"/>
+    <circle cx="900" cy="450" r="3"/>
+    <circle cx="950" cy="450" r="3"/>
+    <circle cx="1000" cy="450" r="3"/>
+    <circle cx="900" cy="500" r="3"/>
+    <circle cx="950" cy="500" r="3"/>
+    <circle cx="1000" cy="500" r="3"/>
+  </g>
+  
+  <!-- Text elements -->
+  <text x="600" y="100" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" opacity="0.1">EXPLORE</text>
+  <text x="600" y="500" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle" opacity="0.1">SERVICES</text>
+</svg>

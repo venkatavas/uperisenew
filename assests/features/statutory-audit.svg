@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#0d47a1"/>
+  <text x="100" y="70" font-family="Arial" font-size="22" fill="white" text-anchor="middle">Statutory</text>
+  <text x="100" y="100" font-family="Arial" font-size="22" fill="white" text-anchor="middle">Audit</text>
+  <!-- Document with checkmark -->
+  <path d="M60,120 L140,120 L140,180 L60,180 Z" fill="#ffffff"/>
+  <path d="M60,120 L80,100 L160,100 L140,120 Z" fill="#e0e0e0"/>
+  <path d="M140,120 L160,100 L160,160 L140,180 Z" fill="#cccccc"/>
+  <path d="M80,130 L100,150 L120,110" stroke="#4caf50" stroke-width="6" fill="none"/>
+</svg>
