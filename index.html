@@ -108,8 +108,21 @@
         }
 
         body.dark-theme .navbar {
-            background-color: var(--background-dark) !important;
+            background-color: #1e1e1e !important;
             transition: background-color 0.5s ease;
+        }
+        
+        /* Ensure text is visible in dark mode */
+        body.dark-theme .text-dark {
+            color: #e0e0e0 !important;
+        }
+        
+        body.dark-theme a:not(.btn) {
+            color: #5e92f3;
+        }
+        
+        body.dark-theme a:hover:not(.btn) {
+            color: #8abfff;
         }
 
         body.dark-theme .card {
@@ -132,6 +145,36 @@
             background-color: var(--background-dark);
             color: var(--text-light);
             transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        
+        /* Form elements in dark mode */
+        body.dark-theme input, 
+        body.dark-theme textarea, 
+        body.dark-theme select {
+            background-color: #2d2d2d;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+        
+        body.dark-theme input::placeholder, 
+        body.dark-theme textarea::placeholder {
+            color: #aaa;
+        }
+        
+        /* Table styling in dark mode */
+        body.dark-theme table {
+            color: #e0e0e0;
+        }
+        
+        body.dark-theme .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        /* List group items in dark mode */
+        body.dark-theme .list-group-item {
+            background-color: #1e1e1e;
+            border-color: #333;
+            color: #e0e0e0;
         }
 
         /* Light mode transition */
