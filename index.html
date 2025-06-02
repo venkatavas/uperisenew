@@ -2881,7 +2881,7 @@ The answer is No — and this article comprehensively explains why, along with l
 </script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
 <!-- Scripts consolidated into inline JavaScript -->
 <script src="main.js"></script>
     <script>
@@ -2951,10 +2951,7 @@ The answer is No — and this article comprehensively explains why, along with l
                     exploreSection.style.backgroundImage = 'url("assests/explore-bg.svg")';
                     exploreSection.style.animation = 'backgroundAnimation 30s ease-in-out infinite alternate';
                     
-                    // Initialize parallax effect
-                    setTimeout(() => {
-                        handleParallax();
-                    }, 100);
+                    // Parallax effect is now handled in main.js
                 }
             }
             
@@ -2982,10 +2979,7 @@ The answer is No — and this article comprehensively explains why, along with l
                         exploreSection.style.backgroundImage = 'url("assests/explore-bg.svg")';
                         exploreSection.style.animation = 'backgroundAnimation 30s ease-in-out infinite alternate';
                         
-                        // Reset parallax effect
-                        setTimeout(() => {
-                            handleParallax();
-                        }, 100);
+                        // Parallax effect is now handled in main.js
                     }
                 }
             });
@@ -3451,38 +3445,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return false; // Prevent default link behavior
     };
     
-    // Parallax effect for explore services section
-    function handleParallax() {
-        const exploreSection = document.querySelector('.explore-services');
-        if (!exploreSection) return;
-        
-        // Only apply parallax in light mode
-        if (document.body.classList.contains('dark-theme')) return;
-        
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.pageYOffset;
-            const sectionPosition = exploreSection.offsetTop;
-            const sectionHeight = exploreSection.offsetHeight;
-            
-            // Check if section is in viewport
-            if (scrollPosition > sectionPosition - window.innerHeight && 
-                scrollPosition < sectionPosition + sectionHeight) {
-                
-                // Calculate parallax effect
-                const yPos = -(scrollPosition - sectionPosition) / 5;
-                exploreSection.style.backgroundPositionY = yPos + 'px';
-            }
-        });
-    }
-    
-    // Initialize parallax effect with a delay to ensure DOM is ready
-    setTimeout(function() {
-        try {
-            handleParallax();
-        } catch(e) {
-            console.error("Error initializing parallax:", e);
-        }
-    }, 1000);
+    // Parallax effect is now handled in main.js
 });
 </script>
 

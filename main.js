@@ -14,7 +14,43 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Country switcher functionality
     setupCountrySwitcher();
+    
+    // Initialize country selection popup
+    initCountrySelectionPopup();
+    
+    // Initialize parallax effect
+    setTimeout(function() {
+        try {
+            handleParallax();
+        } catch(e) {
+            console.error("Error initializing parallax:", e);
+        }
+    }, 1000);
 });
+
+// Parallax effect for explore services section
+function handleParallax() {
+    const exploreSection = document.querySelector('.explore-services');
+    if (!exploreSection) return;
+    
+    // Only apply parallax in light mode
+    if (document.body.classList.contains('dark-theme')) return;
+    
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.pageYOffset;
+        const sectionPosition = exploreSection.offsetTop;
+        const sectionHeight = exploreSection.offsetHeight;
+        
+        // Check if section is in viewport
+        if (scrollPosition > sectionPosition - window.innerHeight && 
+            scrollPosition < sectionPosition + sectionHeight) {
+            
+            // Calculate parallax effect
+            const yPos = -(scrollPosition - sectionPosition) / 5;
+            exploreSection.style.backgroundPositionY = yPos + 'px';
+        }
+    });
+}
 
 // Counter animations
 function initCounterAnimations() {
@@ -52,33 +88,57 @@ function initCounterAnimations() {
 
 // Country switcher functionality
 function setupCountrySwitcher() {
-    const countrySwitcher = document.getElementById('country-switcher');
-    const indiaContent = document.querySelectorAll('.india-content');
-    const usaContent = document.querySelectorAll('.usa-content');
-    const indiaLogo = document.getElementById('india-logo');
-    const usaLogo = document.getElementById('usa-logo');
-    
-    if (countrySwitcher) {
-        countrySwitcher.addEventListener('change', function() {
-            const countryChangeEvent = new Event('countryChanged');
-            
-            if (this.checked) {
-                // Show USA content
-                indiaContent.forEach(item => item.style.display = 'none');
-                usaContent.forEach(item => item.style.display = 'block');
-                indiaLogo.style.display = 'none';
-                usaLogo.style.display = 'block';
-            } else {
-                // Show India content
-                indiaContent.forEach(item => item.style.display = 'block');
-                usaContent.forEach(item => item.style.display = 'none');
-                indiaLogo.style.display = 'block';
-                usaLogo.style.display = 'none';
-            }
-            
-            document.dispatchEvent(countryChangeEvent);
+    // Set up country dropdown options
+    const countryOptions = document.querySelectorAll('.country-option');
+    countryOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const country = this.getAttribute('data-country');
+            switchCountry(country);
         });
+    });
+    
+    // Check if there's a saved country preference
+    const savedCountry = localStorage.getItem('selectedCountry');
+    if (savedCountry) {
+        switchCountry(savedCountry);
     }
+}
+
+// Function to switch country content
+function switchCountry(country) {
+    const indiaContent = document.querySelectorAll('.india-content, .india-only');
+    const usaContent = document.querySelectorAll('.usa-content, .usa-only');
+    const currentFlag = document.getElementById('current-flag');
+    const currentCountry = document.getElementById('current-country');
+    
+    // Dispatch country change event
+    const countryChangeEvent = new Event('countryChanged');
+    
+    if (country === 'usa') {
+        // Show USA content
+        indiaContent.forEach(item => item.style.display = 'none');
+        usaContent.forEach(item => item.style.display = 'block');
+        
+        // Update navbar country selector
+        if (currentFlag) currentFlag.src = "assests/flags/usa.svg";
+        if (currentCountry) currentCountry.textContent = "USA";
+    } else if (country === 'india') {
+        // Show India content
+        indiaContent.forEach(item => item.style.display = 'block');
+        usaContent.forEach(item => item.style.display = 'none');
+        
+        // Update navbar country selector
+        if (currentFlag) currentFlag.src = "assests/flags/india.svg";
+        if (currentCountry) currentCountry.textContent = "India";
+    }
+    
+    // Save selection to localStorage
+    localStorage.setItem('selectedCountry', country);
+    localStorage.setItem('countrySelected', 'true');
+    
+    // Dispatch the event for other components to react
+    document.dispatchEvent(countryChangeEvent);
 }
 
 // Typewriter effect
@@ -133,3 +193,53 @@ document.addEventListener('DOMContentLoaded', function() {
         new TypeWriter(txtElement, words, wait);
     }
 });
+
+// Country selection popup functionality
+function initCountrySelectionPopup() {
+    // Check if it's the first visit
+    if (!localStorage.getItem('countrySelected')) {
+        // Show popup with a slight delay for better UX
+        setTimeout(function() {
+            const popup = document.getElementById('countrySelectionPopup');
+            if (popup) {
+                popup.classList.add('show');
+            }
+        }, 1000);
+    }
+    
+    // Close button functionality
+    const closePopupBtn = document.getElementById('closePopup');
+    if (closePopupBtn) {
+        closePopupBtn.addEventListener('click', function() {
+            const popup = document.getElementById('countrySelectionPopup');
+            popup.classList.remove('show');
+            
+            // Set a flag in localStorage so popup doesn't show again
+            localStorage.setItem('countrySelected', 'true');
+        });
+    }
+    
+    // Country option selection
+    const countryOptions = document.querySelectorAll('.country-option');
+    countryOptions.forEach(function(option) {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get country from data attribute
+            const country = this.getAttribute('data-country');
+            
+            // Handle country selection functionality
+            switchCountry(country);
+            
+            // Close the popup
+            const popup = document.getElementById('countrySelectionPopup');
+            if (popup) {
+                popup.classList.remove('show');
+            }
+            
+            // Set a flag in localStorage so popup doesn't show again
+            localStorage.setItem('countrySelected', 'true');
+            localStorage.setItem('selectedCountry', country);
+        });
+    });
+}
