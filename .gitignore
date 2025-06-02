@@ -1,5 +1,38 @@
 # Ignore large files
 assests/explore.crdownload
+*.crdownload
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.flv
+*.mkv
+*.iso
+*.dmg
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.tgz
+*.bz2
+*.db
+*.sqlite
+*.sqlitedb
+*.sql.gz
+*.pdf
+*.psd
+*.ai
+*.eps
+*.ppt
+*.pptx
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.csv
+# Ignore files larger than 50MB
+# Use Git LFS for these if needed
 
 # Ignore node modules
 node_modules/
