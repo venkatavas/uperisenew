@@ -1,0 +1,273 @@
+/* Navbar specific styling */
+:root {
+    --navbar-blue: #0d47a1;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: var(--navbar-blue) !important; /* Blue background */
+    transition: all 0.3s ease;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.navbar.scrolled {
+    background-color: var(--navbar-blue) !important; /* Keep blue even when scrolled */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.navbar-brand img.logo {
+    max-height: 60px;
+    width: auto;
+    display: block;
+    min-width: 60px;
+    background-color: transparent;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Fix for navbar layout */
+@media (min-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 40px; /* Set a fixed height for all navbar items */
+    }
+    
+    /* Fix for nested navbar */
+    .navbar-nav .navbar-nav {
+        margin-left: 0 !important;
+    }
+    
+    /* Ensure all items are visible and have consistent sizing */
+    .nav-item {
+        white-space: nowrap;
+        height: 40px; /* Match navbar height */
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Make all nav links the same height */
+    .nav-link {
+        height: 40px; /* Match navbar height */
+        display: flex;
+        align-items: center;
+        padding: 0 0.7rem;
+    }
+    
+    /* Make sure theme switch is properly aligned */
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+        height: 40px; /* Match navbar height */
+        margin: 0 5px;
+    }
+    
+    /* Ensure dropdown toggles have the same styling */
+    .dropdown-toggle {
+        height: 40px; /* Match navbar height */
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Country selector styling */
+    .country-selector {
+        height: 40px; /* Match navbar height */
+    }
+    
+    .country-selector .nav-link {
+        height: 40px; /* Match navbar height */
+        display: flex;
+        align-items: center;
+    }
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link-animated {
+    position: relative;
+}
+
+.nav-link-animated::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link-animated:hover::after {
+    width: 70%;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+    z-index: 1030;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    color: #212529;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: var(--navbar-blue);
+    background-color: rgba(13, 71, 161, 0.1);
+}
+
+.dropdown-menu-animated {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile navbar */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--navbar-blue);
+        padding: 1rem;
+        border-radius: 0 0 8px 8px;
+        margin-top: 0.5rem;
+    }
+    
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+    }
+    
+    .dropdown-item {
+        color: white;
+    }
+    
+    .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+}
+
+/* Theme toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #ffc107;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #ffc107;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Flag styling */
+.flag {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-right: 8px;
+}
