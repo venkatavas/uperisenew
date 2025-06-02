@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+/              /index.html     200
+/test          /test.html      200
+/uperiseindia  /uperiseindia.html  200
+/*             /index.html     200

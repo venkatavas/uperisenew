@@ -2,7 +2,22 @@
   publish = "."
   command = ""
 
+# Redirect rule for SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+
+# Specific redirects for direct file access
+[[redirects]]
+  from = "/test"
+  to = "/test.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/uperiseindia"
+  to = "/uperiseindia.html"
+  status = 200
+  force = true
