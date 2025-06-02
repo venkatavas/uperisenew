@@ -894,79 +894,90 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="javascript:void(0);" onclick="refreshPage(this)">
+            <a class="navbar-brand d-flex align-items-center" href="javascript:void(0);" onclick="refreshPage(this)" aria-label="Uperise Global Advisors Home">
                 <div class="logo-container me-2">
-                    <img src="assests/logo2.png" alt="UG" class="logo" width="60" height="60" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="assests/logo2.png" alt="Uperise Global Advisors Logo" class="logo" width="60" height="60" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="logo-fallback" style="display:none; width:60px; height:60px; background-color:#0d47a1; color:white; font-weight:bold; align-items:center; justify-content:center; border-radius:4px; font-size: 18px;">UG</div>
                 </div>
                 <span class="logo-text">Uperise Global Advisors</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="bi bi-list"></i>
+                <span class="sr-only">Menu</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-animated" href="index.html">Home</a>
+                        <a class="nav-link nav-link-animated active" href="index.html" aria-current="page">
+                            <i class="bi bi-house-door me-1"></i>Home
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-animated" href="about.html">About</a>
+                        <a class="nav-link nav-link-animated" href="about.html">
+                            <i class="bi bi-info-circle me-1"></i>About
+                        </a>
                     </li>
                     <!-- Services Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
+                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                            <i class="bi bi-gear me-1"></i>Services <i class="bi bi-chevron-down ms-1 small"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-animated" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="services/accounting.html">Accounting</a></li>
-                            <li><a class="dropdown-item" href="services/taxation.html">Taxation</a></li>
-                            <li><a class="dropdown-item" href="services/internal-audit.html">Internal Audit</a></li>
-                            <li><a class="dropdown-item" href="services/statutory-audit.html">Statutory Audit</a></li>
-                            <li><a class="dropdown-item" href="services/financial-statements.html">Financial Statements</a></li>
-                            <li><a class="dropdown-item" href="services/technology-audit.html">Technology Audit</a></li>
-                            <li><a class="dropdown-item" href="services/technology-development.html">Technology Development</a></li>
-                            <li><a class="dropdown-item" href="services/data-analysis.html">Data Analysis</a></li>
+                            <li><a class="dropdown-item" href="services/accounting.html"><i class="bi bi-calculator me-2"></i>Accounting</a></li>
+                            <li><a class="dropdown-item" href="services/taxation.html"><i class="bi bi-file-earmark-text me-2"></i>Taxation</a></li>
+                            <li><a class="dropdown-item" href="services/internal-audit.html"><i class="bi bi-shield-check me-2"></i>Internal Audit</a></li>
+                            <li><a class="dropdown-item" href="services/statutory-audit.html"><i class="bi bi-clipboard-check me-2"></i>Statutory Audit</a></li>
+                            <li><a class="dropdown-item" href="services/financial-statements.html"><i class="bi bi-graph-up me-2"></i>Financial Statements</a></li>
+                            <li><a class="dropdown-item" href="services/technology-audit.html"><i class="bi bi-pc-display me-2"></i>Technology Audit</a></li>
+                            <li><a class="dropdown-item" href="services/technology-development.html"><i class="bi bi-code-slash me-2"></i>Technology Development</a></li>
+                            <li><a class="dropdown-item" href="services/data-analysis.html"><i class="bi bi-bar-chart me-2"></i>Data Analysis</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-animated" href="contact.html">Contact</a>
+                        <a class="nav-link nav-link-animated" href="contact.html">
+                            <i class="bi bi-envelope me-1"></i>Contact
+                        </a>
                     </li>
+                    <!-- Theme Toggle with Tooltip -->
                     <li class="nav-item">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="theme-toggle">
-                                <input type="checkbox" id="theme-toggle">
-                                <span class="slider"></span>
+                        <div class="theme-switch-wrapper" role="switch" aria-checked="false" tabindex="0" 
+                             data-bs-toggle="tooltip" data-bs-placement="bottom" title="Toggle Light/Dark Theme">
+                            <label class="theme-switch" for="theme-toggle" aria-label="Switch between light and dark themes">
+                                <input type="checkbox" id="theme-toggle" aria-hidden="true">
+                                <span class="slider" aria-hidden="true"></span>
                             </label>
                         </div>
                     </li>
                     <!-- Resources Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="navbarResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Resources
+                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="navbarResources" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                            <i class="bi bi-journal-text me-1"></i>Resources <i class="bi bi-chevron-down ms-1 small"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarResources">
-                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                            <li><a class="dropdown-item" href="case-studies/index.html">Case Studies</a></li>
-                            <li><a class="dropdown-item" href="resources/library.html">Resources Library</a></li>
+                            <li><a class="dropdown-item" href="blog.html"><i class="bi bi-pencil me-2"></i>Blog</a></li>
+                            <li><a class="dropdown-item" href="case-studies/index.html"><i class="bi bi-file-earmark-text me-2"></i>Case Studies</a></li>
+                            <li><a class="dropdown-item" href="resources/library.html"><i class="bi bi-book me-2"></i>Resources Library</a></li>
                         </ul>
                     </li>
+                    <!-- Country Selector with Enhanced UI -->
                     <li class="nav-item dropdown country-selector">
-                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="countryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="countryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                             <span class="country-flag">
-                                <img src="assests/flags/usa.svg" alt="USA" class="flag flag-usa" id="current-flag">
+                                <img src="assests/flags/usa.svg" alt="USA Flag" class="flag flag-usa" id="current-flag">
                             </span>
                             <span class="country-name" id="current-country">USA</span>
+                            <i class="bi bi-chevron-down ms-1 small"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end country-dropdown" aria-labelledby="countryDropdown">
                             <li>
                                 <a class="dropdown-item country-option" href="#" data-country="usa">
-                                    <img src="assests/flags/usa.svg" alt="USA" class="flag">
+                                    <img src="assests/flags/usa.svg" alt="USA Flag" class="flag">
                                     <span>USA Services</span>
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item country-option" href="#" data-country="india">
-                                    <img src="assests/flags/india.svg" alt="India" class="flag">
+                                    <img src="assests/flags/india.svg" alt="India Flag" class="flag">
                                     <span>India Services</span>
                                 </a>
                             </li>
@@ -995,6 +1006,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         <!-- Background image with overlay -->
         <div class="hero-bg-image"></div>
+        
+        <!-- Boundary element to ensure proper containment -->
+        <div class="hero-boundary"></div>
         
         <!-- Content container -->
         <div class="hero-content">
@@ -2730,7 +2744,9 @@ The answer is No — and this article comprehensively explains why, along with l
             
             // Check for saved theme
             const exploreSection = document.querySelector('.explore-services');
-            if (localStorage.getItem('theme') === 'dark') {
+            const isDarkTheme = localStorage.getItem('theme') === 'dark';
+            
+            if (isDarkTheme) {
                 body.classList.add('dark-theme');
                 themeToggle.checked = true;
                 
@@ -2749,6 +2765,14 @@ The answer is No — and this article comprehensively explains why, along with l
                 }
             }
             
+            // Make sure particles are initialized with the correct theme
+            // We need to wait a bit to ensure particles.js is fully loaded
+            setTimeout(function() {
+                if (typeof updateParticles === 'function') {
+                    updateParticles();
+                }
+            }, 500);
+            
             themeToggle.addEventListener('change', function() {
                 const exploreSection = document.querySelector('.explore-services');
                 
@@ -2763,6 +2787,12 @@ The answer is No — and this article comprehensively explains why, along with l
                         exploreSection.style.backgroundImage = 'none';
                         exploreSection.style.backgroundPositionY = '0';
                     }
+                    
+                    // Update particles for dark theme
+                    updateParticles();
+                    
+                    // Dispatch theme change event
+                    document.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: 'dark' } }));
                 } else {
                     // Switch to light theme
                     body.classList.remove('dark-theme');
@@ -2775,6 +2805,12 @@ The answer is No — and this article comprehensively explains why, along with l
                         
                         // Parallax effect is now handled in main.js
                     }
+                    
+                    // Update particles for light theme
+                    updateParticles();
+                    
+                    // Dispatch theme change event
+                    document.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: 'light' } }));
                 }
             });
             
@@ -2803,100 +2839,151 @@ The answer is No — and this article comprehensively explains why, along with l
                 initParticles();
             }
             
-            // Initialize particles
+            // Initialize particles with theme-aware configuration
             function initParticles() {
                 if (document.getElementById('particles-js')) {
-                    particlesJS('particles-js', {
-                        "particles": {
-                            "number": {
-                                "value": 80,
-                                "density": {
-                                    "enable": true,
-                                    "value_area": 800
-                                }
-                            },
-                            "color": {
-                                "value": "#ffffff"
-                            },
-                            "shape": {
-                                "type": "circle",
-                                "stroke": {
-                                    "width": 0,
-                                    "color": "#000000"
-                                },
-                                "polygon": {
-                                    "nb_sides": 5
-                                }
-                            },
-                            "opacity": {
-                                "value": 0.3,
-                                "random": true,
-                                "anim": {
-                                    "enable": true,
-                                    "speed": 1,
-                                    "opacity_min": 0.1,
-                                    "sync": false
-                                }
-                            },
-                            "size": {
-                                "value": 3,
-                                "random": true,
-                                "anim": {
-                                    "enable": true,
-                                    "speed": 2,
-                                    "size_min": 0.1,
-                                    "sync": false
-                                }
-                            },
-                            "line_linked": {
+                    // Determine if dark theme is active
+                    const isDarkTheme = document.body.classList.contains('dark-theme');
+                    
+                    // Configure particles based on theme
+                    const particleConfig = getParticleConfig(isDarkTheme);
+                    
+                    // Initialize particles.js with the configuration
+                    particlesJS('particles-js', particleConfig);
+                    
+                    // Store the particles instance for later reference
+                    window.pJSInstance = pJSDom[0].pJS;
+                }
+            }
+            
+            // Function to get theme-specific particle configuration
+            function getParticleConfig(isDarkTheme) {
+                // Base configuration
+                const config = {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
                                 "enable": true,
-                                "distance": 150,
-                                "color": "#ffffff",
-                                "opacity": 0.2,
-                                "width": 1
+                                "value_area": 800
+                            }
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": isDarkTheme ? "#1a1a1a" : "#000000"
                             },
-                            "move": {
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": isDarkTheme ? 0.4 : 0.3,
+                            "random": true,
+                            "anim": {
                                 "enable": true,
                                 "speed": 1,
-                                "direction": "none",
-                                "random": true,
-                                "straight": false,
-                                "out_mode": "out",
-                                "bounce": false,
-                                "attract": {
-                                    "enable": false,
-                                    "rotateX": 600,
-                                    "rotateY": 1200
-                                }
+                                "opacity_min": 0.1,
+                                "sync": false
                             }
                         },
-                        "interactivity": {
-                            "detect_on": "canvas",
-                            "events": {
-                                "onhover": {
-                                    "enable": true,
-                                    "mode": "grab"
-                                },
-                                "onclick": {
-                                    "enable": true,
-                                    "mode": "push"
-                                },
-                                "resize": true
+                        "size": {
+                            "value": isDarkTheme ? 3.5 : 3,
+                            "random": true,
+                            "anim": {
+                                "enable": true,
+                                "speed": 2,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": isDarkTheme ? 1.2 : 1,
+                            "direction": "none",
+                            "random": true,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
                             },
-                            "modes": {
-                                "grab": {
-                                    "distance": 140,
-                                    "line_linked": {
-                                        "opacity": 0.6
-                                    }
-                                },
-                                "push": {
-                                    "particles_nb": 4
-                                }
-                            }
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
                         },
-                        "retina_detect": true
-                    });
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": isDarkTheme ? 0.7 : 0.6
+                                }
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                };
+                
+                // Theme-specific particle and line colors
+                if (isDarkTheme) {
+                    // Dark theme colors
+                    config.particles.color = {
+                        "value": ["#5e92f3", "#81c784", "#ffb74d", "#e57373", "#9575cd"]
+                    };
+                    config.particles.line_linked = {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#5e92f3", // Primary light color
+                        "opacity": 0.3,
+                        "width": 1
+                    };
+                } else {
+                    // Light theme colors
+                    config.particles.color = {
+                        "value": "#ffffff"
+                    };
+                    config.particles.line_linked = {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.2,
+                        "width": 1
+                    };
+                }
+                
+                return config;
+            }
+            
+            // Function to update particles when theme changes
+            function updateParticles() {
+                if (window.pJSDom && window.pJSDom.length > 0) {
+                    // Get the particles container
+                    const container = document.getElementById('particles-js');
+                    if (!container) return;
+                    
+                    // Clear existing particles
+                    window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                    window.pJSDom = [];
+                    
+                    // Reinitialize with new theme
+                    initParticles();
                 }
             }
         });
@@ -2911,17 +2998,95 @@ The answer is No — and this article comprehensively explains why, along with l
             width: 100%;
             height: 100%;
             z-index: 2;
+            pointer-events: none; /* Allow clicks to pass through to elements below */
+            transition: background-color 0.5s ease;
+        }
+        
+        /* Ensure canvas is properly contained */
+        .particles-container canvas {
+            display: block;
+            vertical-align: bottom;
+            width: 100% !important;
+            height: 100% !important;
+            pointer-events: auto; /* Re-enable pointer events for the canvas */
+        }
+        
+        /* Light theme particles background */
+        .particles-container {
+            background-color: rgba(13, 71, 161, 0.9); /* Blue with opacity */
+        }
+        
+        /* Dark theme particles background */
+        body.dark-theme .particles-container {
+            background-color: rgba(26, 32, 44, 0.9); /* Dark blue/gray with opacity */
         }
         
         .network-bg {
-            background-color: #1a237e; /* Dark blue like in your image */
+            background-color: var(--primary-dark); /* Use theme variable */
             position: relative;
+            transition: background-color 0.5s ease;
+        }
+        
+        body.dark-theme .network-bg {
+            background-color: #121212; /* Darker background for dark theme */
         }
         
         /* Make sure hero content is above particles */
         .hero-content {
             position: relative;
             z-index: 3;
+            pointer-events: auto; /* Ensure content is clickable */
+        }
+        
+        /* Prevent unintentional overlay */
+        .hero-full-bg {
+            position: relative;
+            overflow: hidden; /* Prevent particles from spilling out */
+            isolation: isolate; /* Create a new stacking context */
+            min-height: 100vh; /* Ensure full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle boundary */
+        }
+        
+        /* Hero boundary to ensure proper containment */
+        .hero-boundary {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, 
+                rgba(255, 255, 255, 0), 
+                rgba(255, 255, 255, 0.3), 
+                rgba(255, 255, 255, 0));
+            z-index: 4;
+        }
+        
+        body.dark-theme .hero-boundary {
+            background: linear-gradient(to right, 
+                rgba(0, 0, 0, 0), 
+                rgba(0, 0, 0, 0.3), 
+                rgba(0, 0, 0, 0));
+        }
+        
+        /* Hero background image */
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            opacity: 0.2;
+            transition: opacity 0.5s ease;
+        }
+        
+        body.dark-theme .hero-bg-image {
+            opacity: 0.15;
         }
     </style>
 
@@ -3238,6 +3403,88 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return false; // Prevent default link behavior
     };
+    
+    // Navbar enhancements
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl, {
+                delay: { show: 500, hide: 100 }
+            });
+        });
+        
+        // Set active nav item based on current page
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.navbar .nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && (currentPath.endsWith(href) || 
+                (href === 'index.html' && (currentPath === '/' || currentPath.endsWith('/'))))) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            }
+        });
+        
+        // Make theme toggle accessible via keyboard
+        const themeSwitch = document.querySelector('.theme-switch-wrapper');
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        if (themeSwitch && themeToggle) {
+            themeSwitch.addEventListener('keydown', function(e) {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    themeToggle.checked = !themeToggle.checked;
+                    themeToggle.dispatchEvent(new Event('change'));
+                    
+                    // Update aria-checked
+                    themeSwitch.setAttribute('aria-checked', themeToggle.checked);
+                }
+            });
+            
+            // Update aria-checked when toggle changes
+            themeToggle.addEventListener('change', function() {
+                themeSwitch.setAttribute('aria-checked', themeToggle.checked);
+            });
+        }
+        
+        // Add dropdown indicators for screen readers
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+            if (!toggle.querySelector('.sr-only')) {
+                const srSpan = document.createElement('span');
+                srSpan.classList.add('sr-only');
+                srSpan.textContent = '(dropdown menu)';
+                toggle.appendChild(srSpan);
+            }
+        });
+        
+        // Enhance mobile menu behavior
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        if (navbarToggler && navbarCollapse) {
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (navbarCollapse.classList.contains('show') && 
+                    !navbarCollapse.contains(e.target) && 
+                    !navbarToggler.contains(e.target)) {
+                    navbarToggler.click();
+                }
+            });
+            
+            // Close menu when escape key is pressed
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
+            });
+        }
+    });
     
     // Parallax effect is now handled in main.js
 });

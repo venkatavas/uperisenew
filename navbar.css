@@ -13,6 +13,11 @@
     top: 0;
     width: 100%;
     z-index: 1030;
+    max-width: 100%;
+}
+
+.navbar .container {
+    max-width: 1400px; /* Constrain max width for better readability */
 }
 
 .navbar.scrolled {
@@ -24,6 +29,7 @@
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     display: flex;
     align-items: center;
+    margin-right: 1.5rem; /* Increase spacing after brand */
 }
 
 .logo-container {
@@ -51,11 +57,18 @@
 
 .navbar-toggler {
     border: none;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem; /* Increased padding for better touch target */
+    margin-right: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
     outline: none;
 }
 
@@ -120,12 +133,20 @@
     color: white !important;
     font-weight: 500;
     transition: all 0.3s ease;
-    padding: 0.5rem 0.7rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 1rem; /* Increased horizontal padding for better spacing */
+    font-size: 0.95rem; /* Slightly larger font */
+    margin: 0 0.2rem; /* Add margin between nav items */
+    border-radius: 4px; /* Rounded corners */
 }
 
 .nav-link:hover {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 .nav-link-animated {
@@ -136,10 +157,10 @@
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 3px; /* Slightly thicker underline */
     bottom: 0;
     left: 50%;
-    background-color: white;
+    background-color: var(--accent-color); /* Use accent color for better visibility */
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -148,27 +169,66 @@
     width: 70%;
 }
 
+/* Active nav item styling */
+.nav-link.active {
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active::after {
+    width: 80%;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
 /* Dropdown styling */
 .dropdown-menu {
     z-index: 1030;
     border: none;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for better visibility */
     padding: 0.5rem 0;
     margin-top: 0.5rem;
     background-color: #ffffff;
+    min-width: 200px; /* Ensure dropdown is wide enough */
+    animation: fadeInDropdown 0.3s ease;
+}
+
+@keyframes fadeInDropdown {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .dropdown-item {
     color: #212529;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem; /* Increased padding for better touch targets */
     font-size: 0.9rem;
     transition: all 0.2s ease;
+    border-left: 3px solid transparent; /* For hover effect */
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
     color: var(--navbar-blue);
     background-color: rgba(13, 71, 161, 0.1);
+    border-left-color: var(--navbar-blue); /* Left border on hover */
+}
+
+/* Add dropdown indicator */
+.dropdown-toggle::after {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
+
+.dropdown-toggle:hover::after {
+    transform: translateY(2px);
+}
+
+/* Show dropdown on hover for desktop */
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }
 
 /* Dark mode dropdown styling */
@@ -201,26 +261,93 @@ body.dark-theme .dropdown-item:focus {
     .navbar-collapse {
         background-color: var(--navbar-blue);
         padding: 1rem;
-        border-radius: 0 0 8px 8px;
+        border-radius: 0 0 12px 12px;
         margin-top: 0.5rem;
+        max-height: 80vh; /* Limit height and enable scrolling */
+        overflow-y: auto;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
     
     .nav-item {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 0.8rem;
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    
+    .nav-link {
+        padding: 0.8rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Add icons to mobile menu items for better UX */
+    .nav-link::after {
+        font-family: "bootstrap-icons";
+        margin-left: 0.5rem;
+    }
+    
+    .nav-item:nth-child(1) .nav-link::after {
+        content: "\\F422"; /* Home icon */
+    }
+    
+    .nav-item:nth-child(2) .nav-link::after {
+        content: "\\F4E6"; /* Info icon */
+    }
+    
+    .dropdown-toggle::after {
+        margin-left: auto;
     }
     
     .dropdown-menu {
         background-color: rgba(255, 255, 255, 0.1);
         border: none;
+        margin-top: 0;
+        padding: 0.5rem;
+        border-radius: 8px;
+        animation: none;
     }
     
     .dropdown-item {
         color: white;
+        padding: 0.8rem 1rem;
+        border-radius: 6px;
+        margin-bottom: 0.3rem;
     }
     
     .dropdown-item:hover {
         background-color: rgba(255, 255, 255, 0.2);
         color: white;
+    }
+    
+    /* Theme switch in mobile */
+    .theme-switch-wrapper {
+        margin: 0.8rem 0;
+        justify-content: center;
+        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+    
+    /* Country selector in mobile */
+    .country-selector .dropdown-menu {
+        width: 100%;
+    }
+    
+    .country-option {
+        display: flex;
+        align-items: center;
     }
     
     /* Dark mode mobile navbar */
@@ -246,14 +373,17 @@ body.dark-theme .dropdown-item:focus {
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
-    margin-left: 15px;
+    margin: 0 15px;
+    position: relative;
+    padding: 0 5px;
 }
 
 .theme-switch {
     display: inline-block;
     position: relative;
-    width: 50px;
-    height: 24px;
+    width: 60px;
+    height: 28px;
+    margin: 0;
 }
 
 .theme-switch input {
@@ -272,37 +402,102 @@ body.dark-theme .dropdown-item:focus {
     background-color: rgba(255, 255, 255, 0.3);
     transition: .4s;
     border-radius: 34px;
+    overflow: hidden;
 }
 
+/* Sun and moon icons with enhanced visibility */
 .slider:before {
     position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
+    content: "🌞";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    width: 22px;
+    left: 4px;
     bottom: 3px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
+    font-size: 14px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 input:checked + .slider {
-    background-color: #ffc107;
+    background-color: #2d3748;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #ffc107;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(32px);
+    content: "🌙";
+    background-color: #ffc107;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Flag styling */
+/* Add a subtle glow effect on hover */
+.theme-switch:hover .slider:before {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Removed Light/Dark text labels to prevent overlap */
+
+/* Flag and country selector styling */
 .flag {
     width: 30px;
     height: 20px;
     object-fit: cover;
     border-radius: 3px;
     margin-right: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.country-selector .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin-left: 0.5rem;
+}
+
+.country-selector .nav-link:hover .flag {
+    transform: scale(1.1);
+}
+
+.country-selector .dropdown-toggle::before {
+    content: "🌐"; /* Globe icon */
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.country-name {
+    font-weight: 500;
+    margin-right: 0.3rem;
+}
+
+.country-option {
+    display: flex;
+    align-items: center;
+}
+
+.country-option span {
+    font-weight: 500;
+}
+
+/* Accessibility improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
