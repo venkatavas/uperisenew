@@ -60,6 +60,7 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                height: 40px; /* Set a fixed height for all navbar items */
             }
             
             /* Fix for nested navbar */
@@ -67,16 +68,46 @@
                 margin-left: 0 !important;
             }
             
-            /* Ensure all items are visible */
+            /* Ensure all items are visible and have consistent sizing */
             .nav-item {
                 white-space: nowrap;
+                height: 40px; /* Match navbar height */
+                display: flex;
+                align-items: center;
+            }
+            
+            /* Make all nav links the same height */
+            .nav-link {
+                height: 40px; /* Match navbar height */
+                display: flex;
+                align-items: center;
+                padding: 0 0.7rem;
             }
             
             /* Make sure theme switch is properly aligned */
             .theme-switch-wrapper {
                 display: flex;
                 align-items: center;
+                height: 40px; /* Match navbar height */
                 margin: 0 5px;
+            }
+            
+            /* Ensure dropdown toggles have the same styling */
+            .dropdown-toggle {
+                height: 40px; /* Match navbar height */
+                display: flex;
+                align-items: center;
+            }
+            
+            /* Country selector styling */
+            .country-selector {
+                height: 40px; /* Match navbar height */
+            }
+            
+            .country-selector .nav-link {
+                height: 40px; /* Match navbar height */
+                display: flex;
+                align-items: center;
             }
         }
             
@@ -1114,9 +1145,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             </label>
                         </div>
                     </li>
-                                    <!-- Resources Dropdown -->
+                    <!-- Resources Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="navbarResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Resources
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarResources">
@@ -1126,7 +1157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </ul>
                     </li>
                     <li class="nav-item dropdown country-selector">
-                        <a class="nav-link dropdown-toggle" href="#" id="countryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle nav-link-animated" href="#" id="countryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="country-flag">
                                 <img src="assests/flags/usa.svg" alt="USA" class="flag flag-usa" id="current-flag">
                             </span>
@@ -2395,7 +2426,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="assests/team/team_01.jpg" alt="Team Member" class="team-img" onerror="this.src='https://via.placeholder.com/300x300?text=Team+Member'">
+                        <img src="assests/team/team_01.jpg" alt="Team Member" class="team-img" onerror="this.src='assests/placeholders/team-placeholder.svg'">
                         <div class="team-overlay">
                             <div class="team-social">
                                 <a href="https://www.linkedin.com/in/ca-praveen-chowdary-710602178/" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -2423,7 +2454,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="assests/team/team_02.jpg" alt="Team Member" class="team-img" onerror="this.src='https://via.placeholder.com/300x300?text=Team+Member'">
+                        <img src="assests/team/team_02.jpg" alt="Team Member" class="team-img" onerror="this.src='assests/placeholders/team-placeholder.svg'">
                         <div class="team-overlay">
                             <div class="team-social">
                                 <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -2450,7 +2481,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="assests/team/team_03.jpg" alt="Team Member" class="team-img" onerror="this.src='https://via.placeholder.com/300x300?text=Team+Member'">
+                        <img src="assests/team/team_03.jpg" alt="Team Member" class="team-img" onerror="this.src='assests/placeholders/team-placeholder.svg'">
                         <div class="team-overlay">
                             <div class="team-social">
                                 <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
