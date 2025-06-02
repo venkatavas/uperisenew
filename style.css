@@ -79,6 +79,19 @@ h6 {
   margin-right: 10px;
 }
 
+/* Standardize all nav items */
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0 2px;
+}
+
+/* Make all dropdown toggles consistent */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
 .nav-link {
   color: white !important;
   font-weight: 500;
@@ -86,6 +99,8 @@ h6 {
   padding: 0.5rem 0.7rem;
   font-size: 0.9rem;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link:hover {
@@ -100,17 +115,26 @@ h6 {
 .country-selector .nav-link {
   display: flex;
   align-items: center;
+  padding: 0.5rem 0.7rem; /* Match other nav links */
+  font-size: 0.9rem; /* Match other nav links */
 }
 
 .country-flag img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.country-name {
+  font-size: 0.9rem; /* Match other nav links */
 }
 
 /* Theme switch alignment */
 .theme-switch-wrapper {
   margin: 0 5px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
 }
 
 /* Hero section */
